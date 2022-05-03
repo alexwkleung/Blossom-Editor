@@ -2,6 +2,8 @@ import { app, BrowserWindow } from 'electron'
 
 import { globalShortcut } from 'electron';
 
+//import * as path from 'path';
+
 const createWindow = () => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
@@ -9,8 +11,10 @@ const createWindow = () => {
         height: 600,
         resizable: false,
         fullscreenable: false,
+        //frame: false,
         webPreferences: { 
             nodeIntegration: true,
+            //preload: path.join(__dirname, 'build/preload.js')
         }
     })
     
@@ -25,9 +29,11 @@ const createWindow = () => {
                 x: 800,
                 resizable: false,
                 fullscreenable: false,
+                //frame: false,
             },
             webPreferences: { 
                 nodeIntegration: true,
+                //preload: path.join(__dirname, 'build/preload.js')
             }
           }
       })
