@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 
 <link rel=stylesheet href="lib/codemirror.css">
-<link rel=stylesheet href="theme/ayu-dark.css">
+<link rel=stylesheet href="theme/base16-dark.css">
 <script src="lib/codemirror.js"></script>
 <script src="mode/javascript/javascript.js"></script>
 <script src="mode/css/css.js"></script>
@@ -26,6 +26,7 @@
 
 <div class="button-center">
 <button type="button" onclick="save()"><img src="img/save.png"></button> 
+<button type="button" onclick="window.open('editor.html', '', 'width=900, height=600')"><img src="img/new-window.png"></button>
 <button type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
 </div>
 
@@ -36,7 +37,7 @@
   const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     lineNumbers: true,
     mode: "clike",
-    theme: 'ayu-dark',
+    theme: 'base16-dark',
     smartIndent: false
   });
   editor.setSize("100%", "600")

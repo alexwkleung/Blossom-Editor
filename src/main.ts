@@ -6,10 +6,22 @@ const createWindow = () => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
         width: 900,
-        height: 600
+        height: 600,
+        resizable: false,
+        fullscreenable: false
     })
     //load index.html to app window
     mainWindow.loadFile('editor.html')
+
+    mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+          return {
+            action: 'allow',
+            overrideBrowserWindowOptions: {
+                resizable: false,
+                fullscreenable: false,
+            }
+          }
+      })
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows
