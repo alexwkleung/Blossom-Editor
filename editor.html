@@ -19,7 +19,7 @@
 
   .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
 
-  body { background-color: #B39DDB; }
+  body { background-color: #B39DDB; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
   
   .button-center { display: flex; justify-content: center; }
 </style>
@@ -28,6 +28,7 @@
 <button type="button" onclick="save()"><img src="img/save.png"></button> 
 <button type="button" onclick="window.open('editor.html', '', 'width=900, height=600')"><img src="img/new-window.png"></button>
 <button type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
+<button type="button" onclick="window.close()"><img src="img/close.png"></button>
 </div>
 
 <textarea id="editor"></textarea>
