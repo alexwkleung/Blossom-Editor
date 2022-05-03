@@ -1,0 +1,68 @@
+<!doctype html>
+
+<title>Blossom Editor</title>
+<meta charset="utf-8"/>
+
+<link rel=stylesheet href="lib/codemirror.css">
+<link rel=stylesheet href="theme/ayu-dark.css">
+<script src="lib/codemirror.js"></script>
+<script src="mode/javascript/javascript.js"></script>
+<script src="mode/css/css.js"></script>
+<script src="mode/clike/clike.js"></script>
+<script src="build/scripts/save.js"></script>
+
+<!-- CodeMirror Style -->
+<style>
+  .CodeMirror { height: 100%; border: 1px hidden #ddd; background-color: black; }
+
+  .CodeMirror-scroll { max-height: 100%; }
+
+  .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
+
+  body { background-color: #B39DDB; }
+  
+  .button-center { display: flex; justify-content: center; }
+</style>
+
+<div class="button-center">
+<button type="button" onclick="save()"><img src="img/save.png"></button> 
+<button type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
+</div>
+
+<textarea id="editor"></textarea>
+
+<!-- Editor Script -->
+<script>
+  const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+    lineNumbers: true,
+    mode: "clike",
+    theme: 'ayu-dark',
+    smartIndent: false
+  });
+  editor.setSize("100%", "600")
+  const textToWrite = editor.doc.getValue();
+</script>
+
+<!-- Save -->
+<script>
+  //credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page
+
+  function save() {
+    const textToWrite = editor.getValue();
+    const textFileAsBlob = new Blob([textToWrite], {
+    type: "text/plain; charset=utf-8"
+  });
+
+  const fileNameToSaveAs = "file.txt";
+  const downloadLink = document.createElement("a");
+
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+
+  if(window.webkitURL != null) {
+    //"Chrome allows the link to be clicked without adding it to the DOM."
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    downloadLink.click();
+  }
+</script>

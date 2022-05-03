@@ -1,0 +1,25 @@
+{
+  "name": "blossom-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/main.js",
+  "style": "lib/codemirror.css",
+  "license": "MIT",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+  },
+  "bugs": "https://github.com/alexwkleung/Blossom-Editor/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwkleung/Blossom-Editor.git"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "electron": "^18.2.0"
+  }
+}
