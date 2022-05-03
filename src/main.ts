@@ -9,9 +9,8 @@ const createWindow = () => {
         height: 600,
         resizable: false,
         fullscreenable: false,
-        frame: false,
         webPreferences: { 
-            nodeIntegration: true 
+            nodeIntegration: true,
         }
     })
     
@@ -24,10 +23,11 @@ const createWindow = () => {
             overrideBrowserWindowOptions: {
                 y: 500,
                 x: 800,
-                frame: false
+                resizable: false,
+                fullscreenable: false,
             },
             webPreferences: { 
-                nodeIntegration: true 
+                nodeIntegration: true,
             }
           }
       })
