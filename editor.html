@@ -19,16 +19,20 @@
 
   .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
 
-  body { background-color: #B39DDB; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
+  body { background-color: #B39DDB; }
   
   .button-center { display: flex; justify-content: center; }
+  
+  .border { border-style: solid; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
 </style>
 
+<div class="border">
 <div class="button-center">
 <button type="button" onclick="save()"><img src="img/save.png"></button> 
-<button type="button" onclick="window.open('editor.html', '', 'width=900, height=600')"><img src="img/new-window.png"></button>
+<button type="button" onclick="window.open('editor.html', '', 'width=900, height=600, y=500, x=800, frame=true, resizable=false, fullscreenable=false, nodeIntegration=true')"><img src="img/new-window.png"></button>
 <button type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
 <button type="button" onclick="window.close()"><img src="img/close.png"></button>
+</div>
 </div>
 
 <textarea id="editor"></textarea>
@@ -37,11 +41,11 @@
 <script>
   const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     lineNumbers: true,
-    mode: "clike",
+    mode: "text/plain",
     theme: 'base16-dark',
     smartIndent: false
   });
-  editor.setSize("100%", "600")
+  editor.setSize("100%", "768")
   const textToWrite = editor.doc.getValue();
 </script>
 
