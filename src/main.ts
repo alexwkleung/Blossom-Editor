@@ -1,6 +1,6 @@
-import { globalShortcut } from "electron";
+import { app, BrowserWindow } from 'electron'
 
-const { app, BrowserWindow } = require('electron');
+import { globalShortcut } from 'electron';
 
 const createWindow = () => {
     //create new browser window with specific width + height dimensions
@@ -8,8 +8,13 @@ const createWindow = () => {
         width: 900,
         height: 600,
         resizable: false,
-        fullscreenable: false
+        fullscreenable: false,
+        frame: false,
+        webPreferences: { 
+            nodeIntegration: true 
+        }
     })
+    
     //load index.html to app window
     mainWindow.loadFile('editor.html')
 
@@ -17,8 +22,12 @@ const createWindow = () => {
           return {
             action: 'allow',
             overrideBrowserWindowOptions: {
-                resizable: false,
-                fullscreenable: false,
+                y: 500,
+                x: 800,
+                frame: false
+            },
+            webPreferences: { 
+                nodeIntegration: true 
             }
           }
       })
