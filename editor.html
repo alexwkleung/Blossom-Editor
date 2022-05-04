@@ -3,53 +3,105 @@
 <title>Blossom Editor</title>
 <meta charset="utf-8"/>
 
+<!-- styles -->
 <link rel=stylesheet href="lib/codemirror.css">
-<link rel=stylesheet href="theme/base16-dark.css">
+<link rel=stylesheet href="addon/dialog/dialog.css">
+
+<!-- styles - themes -->
+<link rel=stylesheet href="theme/3024-night.css">
+<link rel=stylesheet href="theme/3024-day.css">
+<link rel=stylesheet href="theme/duotone-dark.css">
+<link rel=stylesheet href="theme/duotone-light.css">
+
+<!-- scripts -->
 <script src="lib/codemirror.js"></script>
 <script src="mode/javascript/javascript.js"></script>
 <script src="mode/css/css.js"></script>
 <script src="mode/clike/clike.js"></script>
-<script src="build/scripts/save.js"></script>
+<script src="addon/search/search.js"></script>
+<script src="addon/search/searchcursor.js"></script>
+<script src="addon/search/jump-to-line.js"></script>
+<script src="addon/dialog/dialog.js"></script>
+<script src="addon/display/autorefresh.js"></script>
 
-<!-- CodeMirror Style -->
+<!-- internal style -->
 <style>
+  /*
   .CodeMirror { height: 100%; border: 1px hidden #ddd; background-color: black; }
 
   .CodeMirror-scroll { max-height: 100%; }
 
   .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
+  */
 
   body { background-color: #B39DDB; }
   
   .button-center { display: flex; justify-content: center; }
   
-  .border { border-style: solid; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
+  .border { height: 53px; border-style: hidden; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
+  
+  select { height: 48px; width: 100px }
 </style>
 
+<!-- button navigations -->
 <div class="border">
 <div class="button-center">
-<button type="button" onclick="save()"><img src="img/save.png"></button> 
-<button type="button" onclick="window.open('editor.html', '', 'width=900, height=600, y=500, x=800, frame=true, resizable=false, fullscreenable=false, nodeIntegration=true')"><img src="img/new-window.png"></button>
-<button type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
-<button type="button" onclick="window.close()"><img src="img/close.png"></button>
-</div>
+<button title="save" type="button" onclick="save()"><img src="img/save.png"></button> 
+<button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1080, height=650, y=500, x=800, frame=false, resizable=false, fullscreenable=false, nodeIntegration=true')"><img src="img/new-window.png"></button>
+<button title="change theme" type="button" onclick="selectTheme()">
+  <select onchange="selectTheme()" id=select>
+    <!-- theme options-->
+    <option selected>3024-night</option>
+    <option>3024-day</option>
+    <option>duotone-dark</option>
+    <option>duotone-light</option>
+  </select>
+</button>
+<button title="refresh/clear editor" type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
+<button title="close window" type="button" onclick="window.close()"><img src="img/close.png"></button>
 </div>
 
+<!-- CodeMirror editor area -->
 <textarea id="editor"></textarea>
 
-<!-- Editor Script -->
+<!-- editor script -->
 <script>
   const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     lineNumbers: true,
     mode: "text/plain",
-    theme: 'base16-dark',
-    smartIndent: false
+    theme: '3024-night',
+    smartIndent: false,
+    autoRefresh: true,
+    //lineWrapping: true,
   });
-  editor.setSize("100%", "768")
-  const textToWrite = editor.doc.getValue();
+  editor.setSize("100%", "650")
+  //const textToWrite = editor.doc.getValue();
+
+  //theme switching - credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
+  const input = document.getElementById("select");
+  function selectTheme() {
+    const theme = input.options[input.selectedIndex].textContent;
+    editor.setOption("theme", theme);
+    location.hash = "#" + theme;
+  }
+
+  const choice = (location.hash && location.hash.slice(1)) || (document.location.search && decodeURIComponent(document.location.search.slice(1)));
+  
+  if(choice) {
+    input.value = choice;
+    editor.setOption("theme", choice);
+  }
+
+  CodeMirror.on(window, "hashchange", function() {
+    consttheme = location.hash.slice(1);
+    if(theme) { 
+      input.value = theme; 
+      selectTheme(); 
+    }
+  });
 </script>
 
-<!-- Save -->
+<!-- save to file -->
 <script>
   //credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page
 
@@ -59,13 +111,13 @@
     type: "text/plain; charset=utf-8"
   });
 
-  const fileNameToSaveAs = "file.txt";
+  const fileNameToSaveAs = "blossom.txt";
   const downloadLink = document.createElement("a");
 
   downloadLink.download = fileNameToSaveAs;
   downloadLink.innerHTML = "Download File";
 
-  if(window.webkitURL != null) {
+  if(window.webkitURL !== null) {
     //"Chrome allows the link to be clicked without adding it to the DOM."
     downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
     }
