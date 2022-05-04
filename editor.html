@@ -7,6 +7,12 @@
 <link rel=stylesheet href="lib/codemirror.css">
 <link rel=stylesheet href="addon/dialog/dialog.css">
 
+<!-- fonts -->
+<!-- ibm plex sans - bold 700 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+
 <!-- styles - themes -->
 <link rel=stylesheet href="theme/3024-night.css">
 <link rel=stylesheet href="theme/duotone-dark.css">
@@ -48,9 +54,13 @@
   
   .border { height: 53px; border-style: hidden; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
   
-  select { height: 48px; width: 115px }
+  select { height: 48px; width: 125px; }
   
-  .mode { height: 48px; width: 115px }
+  .mode { height: 48px; width: 135px; }
+
+  select { font-family: 'IBM Plex Sans', 'sans-serif'; }
+
+  option { font-family: 'IBM Plex Sans', 'sans-serif'; }
 </style>
 
 <!-- button navigations -->
@@ -58,7 +68,7 @@
 <div class="button-center">
 <button title="save" type="button" onclick="save()"><img src="img/save.png"></button> 
 <button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1080, height=650, y=500, x=800, frame=false, resizable=false, fullscreenable=false, nodeIntegration=true')"><img src="img/new-window.png"></button>
-<button title="change theme" type="button" onclick="selectTheme()">
+<button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
     <option selected>3024-night</option>
@@ -68,9 +78,9 @@
   </select>
 </button>
 
-<button title="change mode" type="button" onclick="selectMode()">
+<button title="change mode" type="button">
   <select class="mode" onchange="selectMode()" id=mode>
-    <!-- mode options-->
+    <!-- mode options -->
     <option selected>text/plain</option>
     <option>clike</option>
     <option>text/javascript</option>
