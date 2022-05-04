@@ -8,7 +8,7 @@ const createWindow = () => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
         width: 1080,
-        height: 650,
+        height: 700,
         resizable: false,
         fullscreenable: false,
         frame: false,
