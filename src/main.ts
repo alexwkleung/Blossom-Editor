@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu, MenuItemConstructorOptions } from 'electron'
 
 import { globalShortcut } from 'electron';
 
@@ -7,11 +7,12 @@ import { globalShortcut } from 'electron';
 const createWindow = () => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
-        width: 1080,
-        height: 700,
-        resizable: false,
-        fullscreenable: false,
-        frame: false,
+        width: 1280,
+        height: 750,
+        resizable: true,
+        fullscreenable: true,
+        tabbingIdentifier: 'new tab'
+        //frame: false,
         /*
         webPreferences: { 
             nodeIntegration: true,
@@ -19,7 +20,7 @@ const createWindow = () => {
         }
         */
     })
-    
+
     //load index.html to app window
     mainWindow.loadFile('editor.html')
 
@@ -29,9 +30,10 @@ const createWindow = () => {
             overrideBrowserWindowOptions: {
                 y: 500,
                 x: 800,
-                resizable: false,
-                fullscreenable: false,
-                frame: false,
+                resizable: true,
+                fullscreenable: true,
+                tabbingIdentifier: 'new tab'
+                //frame: false,
             },
             /*
             webPreferences: { 
@@ -41,6 +43,73 @@ const createWindow = () => {
             */
           }
       })
+
+      const isMac = process.platform === 'darwin'
+
+      const menu = Menu.buildFromTemplate(
+        [
+          // { role: 'appMenu' }
+          ...(isMac ? [{
+            label: app.name,
+            submenu: [
+              { role: 'about' },
+              { type: 'separator' },
+              { role: 'hide' },
+              { role: 'hideothers' },
+              { role: 'unhide' },
+              { type: 'separator' },
+              { role: 'quit' }
+            ]
+          }] : []) as MenuItemConstructorOptions[],
+          // { role: 'fileMenu' }
+          {
+            label: 'File',
+            submenu: [
+              isMac ? { role: 'close' } : { role: 'quit' }
+            ] as MenuItemConstructorOptions[]
+          },
+          // { role: 'editMenu' }
+          {
+            label: 'Edit',
+            submenu: [
+              { role: 'undo' },
+              { role: 'redo' },
+              { type: 'separator' },
+              { role: 'cut' },
+              { role: 'copy' },
+              { role: 'paste' },
+              ...(isMac ? [
+                { role: 'pasteAndMatchStyle' },
+                { role: 'delete' },
+                { role: 'selectAll' },
+                { type: 'separator' },
+              ] : [
+                { role: 'delete' },
+                { type: 'separator' },
+                { role: 'selectAll' }
+              ]) as MenuItemConstructorOptions[]
+            ]
+          },
+          // { role: 'viewMenu' }
+          {
+            label: 'View',
+            submenu: [
+                { 
+                    role: 'toggleTabBar', 
+                    accelerator: 'Command+Shift+T' 
+                },
+                { 
+                    role: 'toggleDevTools', 
+                    accelerator: 'Command+Shift+D'
+                },
+                { label: 'Select Next Tab', role: 'selectNextTab', accelerator: 'Control+Tab'  },
+                { label: 'Select Previous Tab', role: 'selectPreviousTab', accelerator: 'Control+Shift+Tab' },
+            ]
+          }
+        ]
+      )
+      
+      Menu.setApplicationMenu(menu)
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows
@@ -66,4 +135,8 @@ app.whenReady().then(() => {
             console.log("CommandOrControl+R: Shortcut Disabled");
         })
     });
+
+    app.on('new-window-for-tab', function() {
+        createWindow();
+    })
 });
