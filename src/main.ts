@@ -12,10 +12,12 @@ const createWindow = () => {
         resizable: false,
         fullscreenable: false,
         frame: false,
+        /*
         webPreferences: { 
             nodeIntegration: true,
             //preload: path.join(__dirname, 'build/preload.js')
         }
+        */
     })
     
     //load index.html to app window
@@ -31,10 +33,12 @@ const createWindow = () => {
                 fullscreenable: false,
                 frame: false,
             },
+            /*
             webPreferences: { 
                 nodeIntegration: true,
                 //preload: path.join(__dirname, 'build/preload.js')
             }
+            */
           }
       })
 };
