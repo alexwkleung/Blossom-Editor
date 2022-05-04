@@ -9,22 +9,30 @@
 
 <!-- styles - themes -->
 <link rel=stylesheet href="theme/3024-night.css">
-<link rel=stylesheet href="theme/3024-day.css">
 <link rel=stylesheet href="theme/duotone-dark.css">
-<link rel=stylesheet href="theme/duotone-light.css">
+<link rel=stylesheet href="theme/paraiso-dark.css">
+<link rel=stylesheet href="theme/material-darker.css">
 
-<!-- scripts -->
+<!-- codemirror script -->
 <script src="lib/codemirror.js"></script>
+
+<!-- mode scripts -->
 <script src="mode/javascript/javascript.js"></script>
 <script src="mode/css/css.js"></script>
+<script src="mode/xml/xml.js"></script>
+<script src="mode/htmlmixed/htmlmixed.js"></script>
 <script src="mode/clike/clike.js"></script>
+<script src="mode/markdown/markdown.js"></script>
+<script src="mode/stex/stex.js"></script>
+
+<!-- addon scripts -->
 <script src="addon/search/search.js"></script>
 <script src="addon/search/searchcursor.js"></script>
 <script src="addon/search/jump-to-line.js"></script>
 <script src="addon/dialog/dialog.js"></script>
 <script src="addon/display/autorefresh.js"></script>
 
-<!-- internal style -->
+<!-- internal styles -->
 <style>
   /*
   .CodeMirror { height: 100%; border: 1px hidden #ddd; background-color: black; }
@@ -40,7 +48,9 @@
   
   .border { height: 53px; border-style: hidden; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
   
-  select { height: 48px; width: 100px }
+  select { height: 48px; width: 115px }
+  
+  .mode { height: 48px; width: 115px }
 </style>
 
 <!-- button navigations -->
@@ -50,13 +60,26 @@
 <button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1080, height=650, y=500, x=800, frame=false, resizable=false, fullscreenable=false, nodeIntegration=true')"><img src="img/new-window.png"></button>
 <button title="change theme" type="button" onclick="selectTheme()">
   <select onchange="selectTheme()" id=select>
-    <!-- theme options-->
+    <!-- theme options -->
     <option selected>3024-night</option>
-    <option>3024-day</option>
     <option>duotone-dark</option>
-    <option>duotone-light</option>
+    <option>paraiso-dark</option>
+    <option>material-darker</option>
   </select>
 </button>
+
+<button title="change mode" type="button" onclick="selectMode()">
+  <select class="mode" onchange="selectMode()" id=mode>
+    <!-- mode options-->
+    <option selected>text/plain</option>
+    <option>clike</option>
+    <option>text/javascript</option>
+    <option>text/html</option>
+    <option>text/x-markdown</option>
+    <option>text/x-stex</option>
+  </select>
+</button>
+
 <button title="refresh/clear editor" type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
 <button title="close window" type="button" onclick="window.close()"><img src="img/close.png"></button>
 </div>
@@ -72,6 +95,7 @@
     theme: '3024-night',
     smartIndent: false,
     autoRefresh: true,
+    scrollbarStyle: null,
     //lineWrapping: true,
   });
   editor.setSize("100%", "650")
@@ -93,12 +117,19 @@
   }
 
   CodeMirror.on(window, "hashchange", function() {
-    consttheme = location.hash.slice(1);
+    const theme = location.hash.slice(1);
     if(theme) { 
       input.value = theme; 
       selectTheme(); 
     }
   });
+
+  //mode switching
+  const modeInput = document.getElementById("mode");
+  function selectMode() {
+    const mode = modeInput.options[modeInput.selectedIndex].textContent;
+    editor.setOption("mode", mode);
+  }
 </script>
 
 <!-- save to file -->
