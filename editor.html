@@ -19,6 +19,9 @@
 <link rel=stylesheet href="theme/paraiso-dark.css">
 <link rel=stylesheet href="theme/material-darker.css">
 <link rel=stylesheet href="theme/gruvbox-dark.css">
+<link rel=stylesheet href="theme/abcdef.css">
+<link rel=stylesheet href="theme/zenburn.css">
+<link rel=stylesheet href="theme/xq-dark.css">
 
 <!-- codemirror script -->
 <script src="lib/codemirror.js"></script>
@@ -38,6 +41,8 @@
 <script src="addon/search/jump-to-line.js"></script>
 <script src="addon/dialog/dialog.js"></script>
 <script src="addon/display/autorefresh.js"></script>
+<script src="addon/edit/closebrackets.js"></script>
+<script src="addon/edit/closetag.js"></script>
 
 <!-- internal styles -->
 <style>
@@ -77,6 +82,9 @@
     <option>paraiso-dark</option>
     <option>material-darker</option>
     <option>gruvbox-dark</option>
+    <option>abcdef</option>
+    <option>zenburn</option>
+    <option>xq-dark</option>
   </select>
 </button>
 
@@ -108,6 +116,7 @@
     smartIndent: false,
     autoRefresh: true,
     scrollbarStyle: null,
+    autoCloseTags: true,
     //lineWrapping: true,
   });
   editor.setSize("100%", "700")
