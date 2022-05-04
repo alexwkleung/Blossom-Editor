@@ -66,13 +66,40 @@
   .mode { height: 48px; width: 135px; }
 
   select { font-family: 'IBM Plex Sans', 'sans-serif'; }
+
+  .button-center-shortcut { display: flex; justify-content: center; }
+
+  .border-shorcut { height: 53px; border-style: hidden; -webkit-user-select: none; user-select: none; -webkit-app-region: drag; }
+
+  summary { font-family: 'IBM Plex Sans', 'sans-serif'; }
+
+  .shortcut-p { text-align: left; }
 </style>
+
+<div class="border-shortcut">
+  <div class="button-center-shortcut">
+  <button title="keyboard shortcuts" type="button">
+    <details>
+    <summary>KB Shortcuts</summary>
+    <p class="shortcut-p">
+    [Command+Shift+T]: Toggle the tab bar. Available when only one tab is opened.
+    <br>
+    <br>
+    [Control+Tab]: Select the next tab.
+    <br>
+    <br>
+    [Control+Shift+Tab]: Select the previous tab.
+    </p>
+    </details>
+    </button>
+    </div>
+  </div>
 
 <!-- button navigations -->
 <div class="border">
 <div class="button-center">
 <button title="save" type="button" onclick="save()"><img src="img/save.png"></button> 
-<button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1080, height=650, y=500, x=800, frame=false, resizable=false, fullscreenable=false')"><img src="img/new-window.png"></button>
+<button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1280, height=750, y=500, x=800, resizable=false, fullscreenable=false')"><img src="img/new-window.png"></button>
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
@@ -100,7 +127,7 @@
 </button>
 
 <button title="refresh/clear editor" type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
-<button title="close window" type="button" onclick="window.close()"><img src="img/close.png"></button>
+<button title="close tab" type="button" onclick="window.close()"><img src="img/close.png"></button>
 </div>
 
 <!-- CodeMirror editor area -->
@@ -118,7 +145,7 @@
     autoCloseTags: true,
     //lineWrapping: true,
   });
-  editor.setSize("100%", "700")
+  editor.setSize("100%", "1440")
   //const textToWrite = editor.doc.getValue();
 
   //theme switching - credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
