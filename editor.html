@@ -226,10 +226,10 @@
 <!-- toggle fullscreen - credit: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API -->
 <script>
   function toggleFullScreen() {
-  if (!document.fullscreenElement) {
+  if(!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {
-    if (document.exitFullscreen) {
+    if(document.exitFullscreen) {
       document.exitFullscreen();
     }
   }
