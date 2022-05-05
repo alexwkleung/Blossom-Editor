@@ -44,6 +44,7 @@ const createWindow = () => {
           }
       })
 
+      //menu bar fix - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript
       const isMac = process.platform === 'darwin'
 
       const menu = Menu.buildFromTemplate(
