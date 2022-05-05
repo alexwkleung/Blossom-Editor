@@ -43,12 +43,12 @@ const createWindow = () => {
       })
 
       //menu bar fix for typescript - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript
-      const isMac = process.platform === 'darwin'
+      const mac = process.platform === 'darwin'
 
       const menu = Menu.buildFromTemplate(
         [
           //app menu
-          ...(isMac ? [{
+          ...(mac ? [{
             label: app.name,
             submenu: [
               { role: 'about' },
@@ -64,7 +64,7 @@ const createWindow = () => {
           {
             label: 'File',
             submenu: [
-              isMac ? { role: 'close' } : { role: 'quit' }
+              mac ? { role: 'close' } : { role: 'quit' }
             ] as MenuItemConstructorOptions[]
           },
           //edit menu
@@ -77,7 +77,7 @@ const createWindow = () => {
               { role: 'cut' },
               { role: 'copy' },
               { role: 'paste' },
-              ...(isMac ? [
+              ...(mac ? [
                 { role: 'pasteAndMatchStyle' },
                 { role: 'delete' },
                 { role: 'selectAll' },
