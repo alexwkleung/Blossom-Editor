@@ -2,7 +2,7 @@
 
 `editor.html` contains scripts from the typescript-compile library made by [niu tech](https://github.com/niutech/typescript-compile). No modifications were made to the original, and was used only as an implementation to this project.
 
-Down below is a copy of the original license. This license is also present in the directory `typescript-compile/LICENSE`.
+Down below is a copy of the original license. This license is also present in the directory `typescript-compile/LICENSE`. The Apache 2.0 license is also provided in the root directory of this project under `LICENSE-APACHE-2.0`.
 
 ```
 Copyright (c) niu tech. All rights reserved. 
