@@ -80,15 +80,33 @@
   <div class="button-center-shortcut">
   <button title="keyboard shortcuts" type="button">
     <details>
-    <summary>KB Shortcuts</summary>
+    <summary accesskey="h">KB Shortcuts</summary>
     <p class="shortcut-p">
-    [Command+Shift+T]: Toggle the tab bar. Available when only one tab is opened.
+    1) [Control+Option+S] or [Control+Option+Shift+S]: Save file
     <br>
     <br>
-    [Control+Tab]: Select the next tab.
+    2) [Command+Shift+F]: Go into Fullscreen.
     <br>
     <br>
-    [Control+Shift+Tab]: Select the previous tab.
+    3) [Command+Shift+T]: Toggle the tab bar. Available when only one tab is opened.
+    <br>
+    <br>
+    4) [Control+Option+K] or [Control+Option+Shift+K]: Refresh/clear editor.
+    <br>
+    <br>
+    5) [Control+Option+W] or [Control+Option+Shift+W]: Open new window.
+    <br>
+    <br>
+    6) [Control+Option+C] or [Control+Option+Shift+C]: Close window.
+    <br>
+    <br>
+    7) [Control+Option+H] or [Control+Option+Shift+H]: Show keyboard shortcuts.
+    <br>
+    <br>
+    8) [Control+Tab]: Select the next tab.
+    <br>
+    <br>
+    9) [Control+Shift+Tab]: Select the previous tab.
     </p>
     </details>
     </button>
@@ -98,7 +116,7 @@
 <!-- button navigations -->
 <div class="border">
 <div class="button-center">
-<button title="save" type="button" onclick="save()"><img src="img/save.png"></button> 
+<button title="save" type="button" accesskey="s" onclick="save()"><img src="img/save.png"></button> 
 <button title="toggle fullscreen" type="button" onclick="toggleFullScreen()"><img src="img/fullscreen.png"></button>
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
@@ -114,7 +132,7 @@
   </select>
 </button>
 
-<button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1280, height=750, y=500, x=800, resizable=true, fullscreenable=true')"><img src="img/new-window.png"></button>
+<button title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '', 'width=1280, height=750, y=500, x=800, resizable=true, fullscreenable=true')"><img src="img/new-window.png"></button>
 
 <button title="change mode" type="button">
   <select class="mode" onchange="selectMode()" id=mode>
@@ -128,8 +146,8 @@
   </select>
 </button>
 
-<button title="refresh/clear editor" type="button" onclick="window.location.reload()"><img src="img/clear.png"></button>
-<button title="close tab" type="button" onclick="window.close()"><img src="img/close.png"></button>
+<button title="refresh/clear editor" type="button" accesskey="k" onclick="window.location.reload()"><img src="img/clear.png"></button>
+<button title="close tab" type="button" accesskey="c" onclick="window.close()"><img src="img/close.png"></button>
 </div>
 
 <!-- CodeMirror editor area -->
@@ -205,7 +223,7 @@
   }
 </script>
 
-<!-- toggle fullscreen -->
+<!-- toggle fullscreen - credit: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API -->
 <script>
   function toggleFullScreen() {
   if (!document.fullscreenElement) {
