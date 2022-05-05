@@ -15,8 +15,7 @@ const createWindow = () => {
         //frame: false,
         /*
         webPreferences: { 
-            nodeIntegration: true,
-            //preload: path.join(__dirname, 'build/preload.js')
+            preload: path.join(__dirname, 'build/preload.js')
         }
         */
     })
@@ -37,19 +36,18 @@ const createWindow = () => {
             },
             /*
             webPreferences: { 
-                nodeIntegration: true,
-                //preload: path.join(__dirname, 'build/preload.js')
+                preload: path.join(__dirname, 'build/preload.js')
             }
             */
           }
       })
 
-      //menu bar fix - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript
+      //menu bar fix for typescript - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript
       const isMac = process.platform === 'darwin'
 
       const menu = Menu.buildFromTemplate(
         [
-          // { role: 'appMenu' }
+          //app menu
           ...(isMac ? [{
             label: app.name,
             submenu: [
@@ -62,14 +60,14 @@ const createWindow = () => {
               { role: 'quit' }
             ]
           }] : []) as MenuItemConstructorOptions[],
-          // { role: 'fileMenu' }
+          //file menu
           {
             label: 'File',
             submenu: [
               isMac ? { role: 'close' } : { role: 'quit' }
             ] as MenuItemConstructorOptions[]
           },
-          // { role: 'editMenu' }
+          //edit menu
           {
             label: 'Edit',
             submenu: [
@@ -91,7 +89,7 @@ const createWindow = () => {
               ]) as MenuItemConstructorOptions[]
             ]
           },
-          // { role: 'viewMenu' }
+          //view menu
           {
             label: 'View',
             submenu: [
@@ -109,8 +107,8 @@ const createWindow = () => {
             ]
           }
         ]
-      )
-      
+      );
+
       Menu.setApplicationMenu(menu)
 };
 
