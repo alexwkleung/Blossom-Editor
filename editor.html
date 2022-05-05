@@ -44,6 +44,10 @@
 <script src="codemirror/addon/edit/closebrackets.js"></script>
 <script src="codemirror/addon/edit/closetag.js"></script>
 
+<!-- typescript-compile - credit: https://github.com/niutech/typescript-compile -->
+<script type="text/javascript" src="typescript-compile/js/typescript.min.js"></script>
+<script type="text/javascript" src="typescript-compile/js/typescript.compile.min.js"></script>
+
 <!-- internal styles -->
 <style>
   /*
@@ -155,82 +159,10 @@
 <textarea id="editor"></textarea>
 
 <!-- editor script -->
-<script>
-  const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
-    lineNumbers: true,
-    mode: "text/plain",
-    theme: '3024-night',
-    smartIndent: false,
-    autoRefresh: true,
-    scrollbarStyle: null,
-    autoCloseTags: true,
-    //lineWrapping: true,
-  });
-  editor.setSize("100%", "1440")
-  //const textToWrite = editor.doc.getValue();
+<script src="src/scripts/editor.ts"></script>
 
-  //theme switching - credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
-  const input = document.getElementById("select");
-  function selectTheme() {
-    const theme = input.options[input.selectedIndex].textContent;
-    editor.setOption("theme", theme);
-    location.hash = "#" + theme;
-  }
+<!-- save to file -->
+<script src="src/scripts/save.ts"></script>
 
-  const choice = (location.hash && location.hash.slice(1)) || (document.location.search && decodeURIComponent(document.location.search.slice(1)));
-  
-  if(choice) {
-    input.value = choice;
-    editor.setOption("theme", choice);
-  }
-
-  CodeMirror.on(window, "hashchange", function() {
-    const theme = location.hash.slice(1);
-    if(theme) { 
-      input.value = theme; 
-      selectTheme(); 
-    }
-  });
-
-  //mode switching
-  const modeInput = document.getElementById("mode");
-  function selectMode() {
-    const mode = modeInput.options[modeInput.selectedIndex].textContent;
-    editor.setOption("mode", mode);
-  }
-</script>
-
-<!-- save to file - credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page -->
-<script>
-  function save() {
-    const textToWrite = editor.getValue();
-    const textFileAsBlob = new Blob([textToWrite], {
-    type: "text/plain; charset=utf-8"
-  });
-
-  const fileNameToSaveAs = "blossom.txt";
-  const downloadLink = document.createElement("a");
-
-  downloadLink.download = fileNameToSaveAs;
-  downloadLink.innerHTML = "Download File";
-
-  if(window.webkitURL !== null) {
-    //"Chrome allows the link to be clicked without adding it to the DOM."
-    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-    }
-    downloadLink.click();
-  }
-</script>
-
-<!-- toggle fullscreen - credit: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API -->
-<script>
-  function toggleFullScreen() {
-  if(!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-    if(document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
-}
-</script>
+<!-- toggle fullscreen -->
+<script src="src/scripts/togglefullscreen.ts"></script>
