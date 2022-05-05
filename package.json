@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "build/main.js",
-  "style": "lib/codemirror.css",
+  "style": "codemirror/lib/codemirror.css",
   "license": "MIT",
   "directories": {
     "lib": "./lib"
