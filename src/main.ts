@@ -104,6 +104,7 @@ const createWindow = () => {
                 },
                 { label: 'Select Next Tab', role: 'selectNextTab', accelerator: 'Control+Tab'  },
                 { label: 'Select Previous Tab', role: 'selectPreviousTab', accelerator: 'Control+Shift+Tab' },
+                { label: 'Toggle Fullscreen', role: 'togglefullscreen', accelerator: 'Command+Shift+F' },
             ]
           }
         ]

@@ -99,7 +99,7 @@
 <div class="border">
 <div class="button-center">
 <button title="save" type="button" onclick="save()"><img src="img/save.png"></button> 
-<button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1280, height=750, y=500, x=800, resizable=true, fullscreenable=true')"><img src="img/new-window.png"></button>
+<button title="toggle fullscreen" type="button" onclick="toggleFullScreen()"><img src="img/fullscreen.png"></button>
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
@@ -113,6 +113,8 @@
     <option>xq-dark</option>
   </select>
 </button>
+
+<button title="open new window" type="button" onclick="window.open('editor.html', '', 'width=1280, height=750, y=500, x=800, resizable=true, fullscreenable=true')"><img src="img/new-window.png"></button>
 
 <button title="change mode" type="button">
   <select class="mode" onchange="selectMode()" id=mode>
@@ -201,4 +203,17 @@
     }
     downloadLink.click();
   }
+</script>
+
+<!-- toggle fullscreen -->
+<script>
+  function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
 </script>
