@@ -1,0 +1,19 @@
+//credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page
+function save() {
+    const textToWrite = editor.getValue();
+    const textFileAsBlob = new Blob([textToWrite], {
+    type: "text/plain; charset=utf-8"
+  });
+
+  const fileNameToSaveAs = "blossom.txt";
+  const downloadLink = document.createElement("a");
+
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+
+  if(window.webkitURL !== null) {
+    //"Chrome allows the link to be clicked without adding it to the DOM."
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    downloadLink.click();
+}
