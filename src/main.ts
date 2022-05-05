@@ -136,6 +136,7 @@ app.whenReady().then(() => {
         })
     });
 
+    //creates a new tab upon clicking the new tab button. depends on tabbingIdentifier for native macOS tab bar (safari-like)
     app.on('new-window-for-tab', function() {
         createWindow();
     })
