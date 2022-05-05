@@ -116,8 +116,10 @@
 <!-- button navigations -->
 <div class="border">
 <div class="button-center">
+  
 <button title="save" type="button" accesskey="s" onclick="save()"><img src="codemirror/img/save.png"></button> 
 <button title="toggle fullscreen" type="button" onclick="toggleFullScreen()"><img src="codemirror/img/fullscreen.png"></button>
+
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
@@ -199,10 +201,8 @@
   }
 </script>
 
-<!-- save to file -->
+<!-- save to file - credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page -->
 <script>
-  //credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page
-
   function save() {
     const textToWrite = editor.getValue();
     const textFileAsBlob = new Blob([textToWrite], {
