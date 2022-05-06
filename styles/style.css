@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url("../fonts/IBMPlexSans-Bold.ttf") format("truetype");
+}
+  
+body { 
+    background-color: #B39DDB; 
+}
+    
+.button-center { 
+    display: flex; justify-content: center; 
+}
+    
+.border { 
+    height: 53px; 
+    border-style: hidden; 
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-app-region: drag;
+}
+ 
+select { 
+    height: 48px; 
+    width: 125px; 
+}
+    
+.mode { 
+    height: 48px; 
+    width: 135px; 
+}
+  
+select { 
+    font-family: 'IBM Plex Sans', 'sans-serif'; 
+}
+  
+.button-center-shortcut { 
+    display: flex; 
+    justify-content: center; 
+}
+  
+.border-shorcut {
+     height: 53px; 
+     border-style: hidden; 
+     -webkit-user-select: none; 
+     user-select: none; 
+     -webkit-app-region: drag; 
+}
+  
+summary { 
+    font-family: 'IBM Plex Sans', 'sans-serif'; 
+}
+  
+.shortcut-p { 
+    text-align: left; 
+}
