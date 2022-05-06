@@ -1,6 +1,8 @@
 import { app, BrowserWindow, Menu, MenuItemConstructorOptions } from 'electron'
 
-import { globalShortcut } from 'electron';
+import electronLocalshortcut from 'electron-localshortcut';
+
+//import { globalShortcut } from 'electron';
 
 //import * as path from 'path';
 
@@ -11,13 +13,12 @@ const createWindow = () => {
         height: 770,
         resizable: true,
         fullscreenable: true,
-        tabbingIdentifier: 'new tab'
+        tabbingIdentifier: 'new tab', 
+        show: false,
         //frame: false,
-        /*
-        webPreferences: { 
-            preload: path.join(__dirname, 'build/preload.js')
-        }
-        */
+        //webPreferences: { 
+            //preload: path.join(__dirname, 'build/preload.js'),
+        //}
     })
 
     //load index.html to app window
@@ -31,14 +32,13 @@ const createWindow = () => {
                 x: 800,
                 resizable: true,
                 fullscreenable: true,
-                tabbingIdentifier: 'new tab'
+                tabbingIdentifier: 'new tab', 
+                show: false,
                 //frame: false,
             },
-            /*
-            webPreferences: { 
-                preload: path.join(__dirname, 'build/preload.js')
-            }
-            */
+            //webPreferences: { 
+                //preload: path.join(__dirname, 'build/preload.js')
+            //}
           }
       })
 
@@ -110,6 +110,23 @@ const createWindow = () => {
       );
 
       Menu.setApplicationMenu(menu)
+
+      //open new window shortcut
+      electronLocalshortcut.register("Command+T", () => {
+        createWindow();
+      })
+
+      //when render process is ready
+      mainWindow.webContents.on('did-finish-load', mainWindowReady);
+
+      function mainWindowReady() {
+        console.log('Renderer Process Ready');
+      }
+
+      //show window after render process is ready
+      mainWindow.once('ready-to-show', () => {
+        mainWindow.show()
+      }) 
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows
@@ -131,8 +148,8 @@ app.whenReady().then(() => {
 
     //disable refresh shortcut (command + r or control + r)
     app.on('browser-window-focus', function() {
-        globalShortcut.register("CommandOrControl+R", () => {
-            console.log("CommandOrControl+R: Shortcut Disabled");
+        electronLocalshortcut.register("CommandOrControl+R", () => {
+            console.log("CommandOrControl+R: Reload Disabled");
         })
     });
 
