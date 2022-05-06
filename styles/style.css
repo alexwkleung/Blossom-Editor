@@ -53,3 +53,15 @@ summary {
 .shortcut-p { 
     text-align: left; 
 }
+
+.file {
+    background-image: url('../src/img/file-open.png');
+    background-repeat: no-repeat;
+}
+
+#file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
