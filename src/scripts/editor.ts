@@ -8,7 +8,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     autoCloseTags: true,
     //lineWrapping: true,
   });
-  editor.setSize("100%", "1440")
+  editor.setSize("100%", "2280")
   //const textToWrite = editor.doc.getValue();
 
   //theme switching - credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
