@@ -8,7 +8,10 @@
   "directories": {
     "lib": "./lib"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "npx --build --clean",
+    "electron": "npx electron ."
+  },
   "bugs": "https://github.com/alexwkleung/Blossom-Editor/issues",
   "repository": {
     "type": "git",
