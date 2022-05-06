@@ -5,13 +5,13 @@ Author: by Bram de Haan, adapted from DuoTone themes by Simurai (http://simurai.
 CodeMirror template by Jan T. Sott (https://github.com/idleberg), adapted by Bram de Haan (https://github.com/atelierbram/)
 */
 
-.cm-s-duotone-dark.CodeMirror { background: #2a2734; color: #6c6783; }
+.cm-s-duotone-dark.CodeMirror { background: #2a2734; color: #b5b5b5; }
 .cm-s-duotone-dark div.CodeMirror-selected { background: #545167!important; }
 .cm-s-duotone-dark .CodeMirror-gutters { background: #2a2734; border-right: 0px; }
-.cm-s-duotone-dark .CodeMirror-linenumber { color: #545167; }
+.cm-s-duotone-dark .CodeMirror-linenumber { color: #a6a1c4; }
 
 /* begin cursor */
-.cm-s-duotone-dark .CodeMirror-cursor { border-left: 1px solid #ffad5c; /* border-left: 1px solid #ffad5c80; */ border-right: .5em solid #ffad5c; /* border-right: .5em solid #ffad5c80; */ opacity: .5; }
+.cm-s-duotone-dark .CodeMirror-cursor { border-left: 1px solid #5cffd4; /* border-left: 1px solid #ffad5c80; */ border-right: .5em solid #5cffd4; /* border-right: .5em solid #ffad5c80; */ opacity: .5; }
 .cm-s-duotone-dark .CodeMirror-activeline-background { background: #363342; /* background: #36334280;  */ opacity: .5;}
 .cm-s-duotone-dark .cm-fat-cursor .CodeMirror-cursor { background: #ffad5c; /* background: #ffad5c80; */ opacity: .5;}
 /* end cursor */

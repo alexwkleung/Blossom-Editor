@@ -29,6 +29,7 @@
 <script src="codemirror/mode/clike/clike.js"></script>
 <script src="codemirror/mode/markdown/markdown.js"></script>
 <script src="codemirror/mode/stex/stex.js"></script>
+<script src="codemirror/mode/shell/shell.js"></script>
 
 <!-- addon scripts -->
 <script src="codemirror/addon/search/search.js"></script>
@@ -85,8 +86,9 @@
 <div class="border">
 <div class="button-center">
 
-<button><img src="src/img/file-open.png">
-<input accesskey="o" type="file" onchange="loadfile(this)">
+<button title="open file">
+<label for="file"><img src="src/img/file-open.png"></label>
+<input id="file" type="file" accesskey="o" onchange="loadfile(this)">
 </button>
 
 <button title="save" type="button" accesskey="s" onclick="save()"><img src="src/img/save.png"></button> 
@@ -96,8 +98,8 @@
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
-    <option selected>3024-night</option>
-    <option>duotone-dark</option>
+    <option selected>duotone-dark</option>
+    <option>3024-night</option>
     <option>paraiso-dark</option>
     <option>material-darker</option>
     <option>gruvbox-dark</option>
@@ -118,6 +120,7 @@
     <option>text/html</option>
     <option>text/x-markdown</option>
     <option>text/x-stex</option>
+    <option>text/x-sh</option>
   </select>
 </button>
 
