@@ -63,7 +63,7 @@
     4) [Control+Option+K] or [Control+Option+Shift+K]: Refresh/clear editor.
     <br>
     <br>
-    5) [Control+Option+W] or [Control+Option+Shift+W]: Open new window.
+    5) [Command+T] [Control+Option+W] or [Control+Option+Shift+W]: Open new tab.
     <br>
     <br>
     6) [Control+Option+C] or [Control+Option+Shift+C]: Close window.
@@ -95,7 +95,7 @@
 <button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button id="searchbtn" title="search" type="button" onclick="find();"><img src="src/img/search.png"></button>
 
-<button title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '', 'width=1280, height=770, y=500, x=800, resizable=true, fullscreenable=true')"><img src="src/img/new-window.png"></button>
+<button id="open" title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '_blank', 'width=1280, height=770, y=500, x=800, resizable=true, fullscreenable=true')"><img src="src/img/new-window.png"></button>
 
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
