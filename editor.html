@@ -60,13 +60,13 @@
     3) [Command+Shift+T]: Toggle the tab bar. Available when only one tab is opened.
     <br>
     <br>
-    4) [Control+Option+K] or [Control+Option+Shift+K]: Refresh/clear editor.
+    4) [Control+Option+L] or [Control+Option+Shift+L]: Refresh/clear editor.
     <br>
     <br>
-    5) [Command+T] [Control+Option+W] or [Control+Option+Shift+W]: Open new tab.
+    5) [Command+T]: Open new tab.
     <br>
     <br>
-    6) [Control+Option+C] or [Control+Option+Shift+C]: Close window.
+    6) [Command+W] or [Control+Option+C] or [Control+Option+Shift+C]: Close tab.
     <br>
     <br>
     7) [Control+Option+H] or [Control+Option+Shift+H]: Show keyboard shortcuts.
@@ -76,6 +76,9 @@
     <br>
     <br>
     9) [Control+Shift+Tab]: Select the previous tab.
+    <br>
+    <br>
+    10) [Control+K] or [Control+Option+K] or [Control+Option+Shift+K]: Kill line.
     </p>
     </details>
     </button>
@@ -92,8 +95,10 @@
 </button>
 
 <button title="save file" type="button" accesskey="s" onclick="save()"><img src="src/img/save.png"></button> 
-<button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button id="searchbtn" title="search" type="button" onclick="find();"><img src="src/img/search.png"></button>
+
+<button title="undo selection" type="button" onclick="undo()"><img src="src/img/undo.png"></button>
+<button title="redo selection" type="button" onclick="redo()"><img src="src/img/redo.png"></button>
 
 <!-- <button id="open" title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '_blank', 'width=1280, height=770, y=500, x=800, resizable=true, fullscreenable=true')"><img src="src/img/new-window.png"></button> -->
 
@@ -111,7 +116,7 @@
   </select>
 </button>
 
-<button title="change mode" type="button">
+<button title="change editor mode" type="button">
   <select class="mode" onchange="selectMode()" id=mode>
     <!-- mode options -->
     <option selected>text/plain</option>
@@ -124,7 +129,9 @@
   </select>
 </button>
 
-<button title="refresh/clear editor" type="button" accesskey="k" onclick="window.location.reload()"><img src="src/img/clear.png"></button>
+<button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
+<button title="kill line" type="button" accesskey="k" onclick="killLine()"><img src="src/img/kill-line.png"></button>
+<button title="refresh/clear editor" type="button" accesskey="l" onclick="window.location.reload()"><img src="src/img/clear.png"></button>
 <button title="close tab" type="button" accesskey="c" onclick="window.close()"><img src="src/img/close.png"></button>
 </div>
 
@@ -145,3 +152,12 @@
 
 <!-- open file -->
 <script src="src/scripts/open-file.ts"></script>
+
+<!-- undo selection -->
+<script src="src/scripts/undo.ts"></script>
+
+<!-- redo selection -->
+<script src="src/scripts/redo.ts"></script>
+
+<!-- kill line -->
+<script src="src/scripts/kill-line.ts"></script>
