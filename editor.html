@@ -84,7 +84,11 @@
 <!-- button navigations -->
 <div class="border">
 <div class="button-center">
-  
+
+<button><img src="src/img/file-open.png">
+<input type="file" onchange="loadfile(this)">
+</button>
+
 <button title="save" type="button" accesskey="s" onclick="save()"><img src="src/img/save.png"></button> 
 <button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button id="searchbtn" title="search" type="button" onclick="find();"><img src="src/img/search.png"></button>
@@ -135,3 +139,6 @@
 
 <!-- execute find -->
 <script src="src/scripts/find.ts"></script>
+
+<!-- open file -->
+<script src="src/scripts/open-file.ts"></script>
