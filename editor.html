@@ -91,9 +91,11 @@
 <input id="file" type="file" accesskey="o" onchange="loadfile(this)">
 </button>
 
-<button title="save" type="button" accesskey="s" onclick="save()"><img src="src/img/save.png"></button> 
+<button title="save file" type="button" accesskey="s" onclick="save()"><img src="src/img/save.png"></button> 
 <button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button id="searchbtn" title="search" type="button" onclick="find();"><img src="src/img/search.png"></button>
+
+<button title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '', 'width=1280, height=770, y=500, x=800, resizable=true, fullscreenable=true')"><img src="src/img/new-window.png"></button>
 
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
@@ -108,8 +110,6 @@
     <option>xq-dark</option>
   </select>
 </button>
-
-<button title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '', 'width=1280, height=770, y=500, x=800, resizable=true, fullscreenable=true')"><img src="src/img/new-window.png"></button>
 
 <button title="change mode" type="button">
   <select class="mode" onchange="selectMode()" id=mode>
