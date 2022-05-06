@@ -1,7 +1,7 @@
 const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     lineNumbers: true,
     mode: "text/plain",
-    theme: '3024-night',
+    theme: 'duotone-dark',
     smartIndent: false,
     autoRefresh: true,
     scrollbarStyle: null,
