@@ -2,9 +2,9 @@ import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions } from 'e
 
 import electronLocalshortcut from 'electron-localshortcut';
 
-const pty = require("node-pty");
+const pty = require('node-pty');
 
-import os from "os";
+import os from 'os';
 
 //import { globalShortcut } from 'electron';
 
@@ -151,7 +151,7 @@ const createWindow = () => {
 
     ptyProcess.on('data', function(data: any) {
         mainWindow.webContents.send("terminal.incoming", data);
-        console.log("Terminal Incoming Data Sent");
+        //console.log("Terminal Incoming Data Sent");
     });
 
     ipcMain.on("terminal.keystroke", (event, key) => {
