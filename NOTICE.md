@@ -23,4 +23,4 @@ and limitations under the License.
 
 The xterm terminal is based off of [77Z](https://github.com/77Z/electron-local-terminal-prototype)'s electron-local-terminal-prototype project.
 
-I tweaked the implementation to make it work with the current Electron, Node.js, and TypeScript versions for this project.
+I tweaked the implementation to make it work with the current versions of Electron, Node.js, and TypeScript for this project.
