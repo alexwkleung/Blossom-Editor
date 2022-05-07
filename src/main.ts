@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions, dialog } from 'electron'
 
 import electronLocalshortcut from 'electron-localshortcut';
 
@@ -157,15 +157,28 @@ const createWindow = () => {
         ptyProcess.write(key);
     });
 
-    //this fixes the error "... Uncaught Exception: TypeError: Object has been destroyed ...".
+    //mainWindow.hide() fixes the error "... Uncaught Exception: TypeError: Object has been destroyed ...".
     //the terminals are synced across tabs and are not separate processes. 
     //thus, closing a tab will destroy the correlated terminal object and cause the app to break.
     //not sure if this fix works for all Mac users using the app. however, it currently works the way i imagined it to be.
     //credit: https://stackoverflow.com/questions/41503873/cannot-prevent-window-close-in-electron (by Sudheer Gupta)
+
+    //use synchronous message box to wait for user to select an option before yes/no operations
+    //credit: https://stackoverflow.com/questions/69233432/electron-app-close-dialog-with-message-box-confirmation
     mainWindow.on('close', (e) => {
-      e.preventDefault();
-      mainWindow.hide();
-    });
+      let response = dialog.showMessageBoxSync(mainWindow, {
+          type: 'question',
+          buttons: ['Yes', 'No'],
+          title: 'Confirm',
+          message: 'Are you sure you want to close the window?'
+      });
+      if(response == 1) {
+        e.preventDefault(); 
+      } else {
+        e.preventDefault();
+        mainWindow.hide();
+      }
+  });
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows
