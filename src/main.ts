@@ -1,6 +1,10 @@
-import { app, BrowserWindow, Menu, MenuItemConstructorOptions } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions } from 'electron'
 
 import electronLocalshortcut from 'electron-localshortcut';
+
+const pty = require("node-pty");
+
+import os from "os";
 
 //import { globalShortcut } from 'electron';
 
@@ -9,16 +13,18 @@ import electronLocalshortcut from 'electron-localshortcut';
 const createWindow = () => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
-        width: 1280,
+        width: 1440,
         height: 770,
         resizable: true,
         fullscreenable: true,
         tabbingIdentifier: 'new tab', 
-        show: false,
+        //show: true,
         //frame: false,
-        //webPreferences: { 
+        webPreferences: { 
+            nodeIntegration: true,
+            contextIsolation: false,
             //preload: path.join(__dirname, 'build/preload.js'),
-        //}
+        }
     })
 
     //load index.html to app window
@@ -33,12 +39,14 @@ const createWindow = () => {
                 resizable: true,
                 fullscreenable: true,
                 tabbingIdentifier: 'new tab', 
-                show: false,
+                //show: true,
                 //frame: false,
             },
-            //webPreferences: { 
+            webPreferences: { 
+              nodeIntegration: true,
+              contextIsolation: false,
                 //preload: path.join(__dirname, 'build/preload.js')
-            //}
+            }
           }
       })
 
@@ -123,10 +131,32 @@ const createWindow = () => {
         console.log('Renderer Process Ready');
       }
 
+      /*
       //show window after render process is ready
       mainWindow.once('ready-to-show', () => {
         mainWindow.show()
       }) 
+      */
+
+      //ipc - pty process terminal. credit: https://github.com/77Z/electron-local-terminal-prototype
+      const shell = os.platform() === 'darwin' ? "bash" : "shell"
+
+      const ptyProcess = pty.spawn(shell, [], {
+        name: "xterm-color",
+        cols: 80,
+        rows: 24,
+        cwd: process.env.HOME,
+        //env: process.env
+    });
+
+    ptyProcess.on('data', function(data: any) {
+        mainWindow.webContents.send("terminal.incoming", data);
+        console.log("Terminal Incoming Data Sent");
+    });
+
+    ipcMain.on("terminal.keystroke", (event, key) => {
+        ptyProcess.write(key);
+    });
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows

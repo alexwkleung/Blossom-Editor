@@ -8,6 +8,9 @@
 <link rel=stylesheet href="codemirror/addon/dialog/dialog.css">
 <link rel=stylesheet href="styles/style.css">
 
+<!-- styles - xterm -->
+<link rel="stylesheet" href="node_modules/xterm/css/xterm.css">
+
 <!-- styles - themes -->
 <link rel=stylesheet href="codemirror/theme/duotone-dark.css">
 <link rel=stylesheet href="codemirror/theme/3024-night.css">
@@ -44,6 +47,9 @@
 <script type="text/javascript" src="typescript-compile/js/typescript.min.js"></script>
 <script type="text/javascript" src="typescript-compile/js/typescript.compile.min.js"></script>
 
+<!-- xtermjs script -->
+<script src="node_modules/xterm/lib/xterm.js"></script>
+
 <!-- shortcut help button -->
 <div class="border-shortcut">
   <div class="button-center-shortcut">
@@ -78,12 +84,12 @@
     9) [Control+Shift+Tab]: Select the previous tab.
     <br>
     <br>
-    10) [Control+K] or [Control+Option+K] or [Control+Option+Shift+K]: Kill line.
+    10) [Control+K] or [Control+Option+K] or [Control+Option+Shift+K]: Emacs-style kill line.
     </p>
     </details>
     </button>
     </div>
-  </div>
+</div>
 
 <!-- button navigations -->
 <div class="border">
@@ -135,8 +141,11 @@
 <button title="close tab" type="button" accesskey="c" onclick="window.close()"><img src="src/img/close.png"></button>
 </div>
 
+<!-- xtermjs terminal -->
+<div id="terminal">
 <!-- CodeMirror editor area -->
 <textarea id="editor"></textarea>
+</div>
 
 <!-- editor script -->
 <script src="src/scripts/editor.ts"></script>
@@ -161,3 +170,6 @@
 
 <!-- kill line -->
 <script src="src/scripts/kill-line.ts"></script>
+
+<!-- renderer -->
+<script src="src/renderer.js"></script>
