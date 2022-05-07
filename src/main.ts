@@ -138,7 +138,7 @@ const createWindow = () => {
 
       //ipc - pty process terminal
       //credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
-      const shell = os.platform() === 'darwin' ? "bash" : "shell"
+      const shell = os.platform() === 'darwin' ? "bash" : "bash"
 
       const ptyProcess = pty.spawn(shell, [], {
         name: "xterm-color",
