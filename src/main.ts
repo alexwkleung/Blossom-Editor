@@ -49,7 +49,8 @@ const createWindow = () => {
           }
       })
 
-      //menu bar fix for typescript - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript (by jkmartindale)
+      //menu bar fix for typescript
+      //credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript (by jkmartindale)
       const mac = process.platform === 'darwin'
 
       const menu = Menu.buildFromTemplate(
@@ -135,7 +136,8 @@ const createWindow = () => {
         mainWindow.show()
       }) 
 
-      //ipc - pty process terminal. credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
+      //ipc - pty process terminal
+      //credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
       const shell = os.platform() === 'darwin' ? "bash" : "shell"
 
       const ptyProcess = pty.spawn(shell, [], {
