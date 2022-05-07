@@ -5,3 +5,7 @@ build:
 .PHONY: electron
 electron:
 	npx electron .
+
+.PHONY: rebuild
+rebuild:
+	npm run rebuild
