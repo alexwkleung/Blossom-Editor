@@ -11,7 +11,8 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   editor.setSize("100%", "2280")
   //const textToWrite = editor.doc.getValue();
 
-  //theme switching - credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
+  //theme switching
+  //credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
   const input = document.getElementById("select");
   function selectTheme() {
     const theme = input.options[input.selectedIndex].textContent;
