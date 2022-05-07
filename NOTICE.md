@@ -18,3 +18,9 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ```
+
+# Other Attributions
+
+The code for the xterm terminal was based off of [77Z](https://github.com/77Z/electron-local-terminal-prototype)'s electron-local-terminal-prototype project.
+
+I tweaked the implementation make it work with the current Electron and Node.js versions, along with TypeScript.
