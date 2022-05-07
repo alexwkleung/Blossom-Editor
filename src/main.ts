@@ -13,7 +13,7 @@ import os from 'os';
 const createWindow = () => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
-        width: 1440,
+        width: 1650, //prev: 1440
         height: 770,
         resizable: true,
         fullscreenable: true,
