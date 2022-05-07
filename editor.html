@@ -43,7 +43,7 @@
 <script src="codemirror/addon/edit/closebrackets.js"></script>
 <script src="codemirror/addon/edit/closetag.js"></script>
 
-<!-- typescript-compile - credit: https://github.com/niutech/typescript-compile -->
+<!-- typescript-compile - credit: https://github.com/niutech/typescript-compile (by niutech) -->
 <script type="text/javascript" src="typescript-compile/js/typescript.min.js"></script>
 <script type="text/javascript" src="typescript-compile/js/typescript.compile.min.js"></script>
 
@@ -106,8 +106,6 @@
 <button title="undo selection" type="button" onclick="undo()"><img src="src/img/undo.png"></button>
 <button title="redo selection" type="button" onclick="redo()"><img src="src/img/redo.png"></button>
 
-<!-- <button id="open" title="open new window" type="button" accesskey="w" onclick="window.open('editor.html', '_blank', 'width=1280, height=770, y=500, x=800, resizable=true, fullscreenable=true')"><img src="src/img/new-window.png"></button> -->
-
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
@@ -137,8 +135,7 @@
 
 <button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button title="kill line" type="button" accesskey="k" onclick="killLine()"><img src="src/img/kill-line.png"></button>
-<!-- <button title="refresh/clear editor" type="button" accesskey="l" onclick="window.location.reload()"><img src="src/img/clear.png"></button> -->
-<button title="close tab" type="button" accesskey="c" onclick="window.close()"><img src="src/img/close.png"></button>
+<button title="refresh/clear editor" type="button" accesskey="l" onclick="window.location.reload()"><img src="src/img/clear.png"></button>
 </div>
 
 <!-- xtermjs terminal -->
