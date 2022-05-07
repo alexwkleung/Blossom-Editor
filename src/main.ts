@@ -49,7 +49,7 @@ const createWindow = () => {
           }
       })
 
-      //menu bar fix for typescript - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript
+      //menu bar fix for typescript - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript (by jkmartindale)
       const mac = process.platform === 'darwin'
 
       const menu = Menu.buildFromTemplate(
@@ -135,7 +135,7 @@ const createWindow = () => {
         mainWindow.show()
       }) 
 
-      //ipc - pty process terminal. credit: https://github.com/77Z/electron-local-terminal-prototype
+      //ipc - pty process terminal. credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
       const shell = os.platform() === 'darwin' ? "bash" : "shell"
 
       const ptyProcess = pty.spawn(shell, [], {
@@ -153,6 +153,16 @@ const createWindow = () => {
 
     ipcMain.on("terminal.keystroke", (event, key) => {
         ptyProcess.write(key);
+    });
+
+    //this fixes the error "... Uncaught Exception: TypeError: Object has been destroyed ...".
+    //the terminals are synced across tabs and are not separate processes. 
+    //thus, closing a tab will destroy the correlated terminal object and cause the app to break.
+    //not sure if this fix works for all Mac users using the app. however, it currently works the way i imagined it to be.
+    //credit: https://stackoverflow.com/questions/41503873/cannot-prevent-window-close-in-electron (by Sudheer Gupta)
+    mainWindow.on('close', (e) => {
+      e.preventDefault();
+      mainWindow.hide();
     });
 };
 
