@@ -11,7 +11,7 @@ CodeMirror template by Jan T. Sott (https://github.com/idleberg), adapted by Bra
 .cm-s-duotone-dark .CodeMirror-linenumber { color: #a6a1c4; }
 
 /* begin cursor */
-.cm-s-duotone-dark .CodeMirror-cursor { border-left: 1px solid #fffc5c; /* border-left: 1px solid #ffad5c80; */ border-right: .5em solid #fffc5c; /* border-right: .5em solid #ffad5c80; */ opacity: .5; }
+.cm-s-duotone-dark .CodeMirror-cursor { border-left: 1px solid #fffc5c; /* border-left: 1px solid #ffad5c80; */ border-right: .5em solid #fffc5c; /* border-right: .5em solid #ffad5c80; */ opacity: .6; }
 .cm-s-duotone-dark .CodeMirror-activeline-background { background: #363342; /* background: #36334280;  */ opacity: .5;}
 .cm-s-duotone-dark .cm-fat-cursor .CodeMirror-cursor { background: #ffad5c; /* background: #ffad5c80; */ opacity: .5;}
 /* end cursor */

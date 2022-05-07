@@ -10,7 +10,7 @@
 .cm-s-gruvbox-dark.CodeMirror, .cm-s-gruvbox-dark .CodeMirror-gutters { background-color: #282828; color: #bdae93; }
 .cm-s-gruvbox-dark .CodeMirror-gutters {background: #282828; border-right: 0px;}
 .cm-s-gruvbox-dark .CodeMirror-linenumber {color: #7c6f64;}
-.cm-s-gruvbox-dark .CodeMirror-cursor { border-left: 1px solid #ebdbb2; }
+.cm-s-gruvbox-dark .CodeMirror-cursor { border-left: 1px solid #4ee1fe; /* border-left: 1px solid #ffad5c80; */ border-right: .5em solid #4ee1fe; /* border-right: .5em solid #ffad5c80; */ opacity: .6; }
 .cm-s-gruvbox-dark.cm-fat-cursor .CodeMirror-cursor { background-color: #8e8d8875 !important; }
 .cm-s-gruvbox-dark .cm-animate-fat-cursor { background-color: #8e8d8875 !important; }
 .cm-s-gruvbox-dark div.CodeMirror-selected { background: #928374; }

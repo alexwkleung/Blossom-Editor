@@ -4,7 +4,8 @@
 }
   
 body { 
-    background-color: #B39DDB; 
+    background-color: #545167;
+    overflow-x: hidden;
 }
     
 .button-center { 
@@ -70,3 +71,10 @@ summary {
 #terminal {
     display: flex;
 }
+
+::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+    display: none;
+    background-color: transparent;
+  }
