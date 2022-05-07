@@ -1,4 +1,4 @@
-//credit: https://github.com/77Z/electron-local-terminal-prototype
+//credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
 const ipc = require('electron').ipcRenderer;
 
 const term = new Terminal();
