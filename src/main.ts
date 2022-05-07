@@ -18,7 +18,7 @@ const createWindow = () => {
         resizable: true,
         fullscreenable: true,
         tabbingIdentifier: 'new tab', 
-        //show: true,
+        show: false,
         //frame: false,
         webPreferences: { 
             nodeIntegration: true,
@@ -26,7 +26,6 @@ const createWindow = () => {
             //preload: path.join(__dirname, 'build/preload.js'),
         }
     })
-
     //load index.html to app window
     mainWindow.loadFile('editor.html')
 
@@ -39,7 +38,7 @@ const createWindow = () => {
                 resizable: true,
                 fullscreenable: true,
                 tabbingIdentifier: 'new tab', 
-                //show: true,
+                show: false,
                 //frame: false,
             },
             webPreferences: { 
@@ -131,12 +130,10 @@ const createWindow = () => {
         console.log('Renderer Process Ready');
       }
 
-      /*
       //show window after render process is ready
       mainWindow.once('ready-to-show', () => {
         mainWindow.show()
       }) 
-      */
 
       //ipc - pty process terminal. credit: https://github.com/77Z/electron-local-terminal-prototype
       const shell = os.platform() === 'darwin' ? "bash" : "shell"
@@ -169,6 +166,7 @@ app.whenReady().then(() => {
             createWindow();
         }
     })
+    
     //quit app when window is closed (windows + linux) except on MacOS
     app.on('window-all-closed', () => {
         if(process.platform !== 'darwin') {
