@@ -170,7 +170,7 @@ const createWindow = () => {
           type: 'question',
           buttons: ['Yes', 'No'],
           title: 'Confirm',
-          message: 'Are you sure you want to close the window?'
+          message: 'Are you sure you want to close?'
       });
       if(response == 1) {
         e.preventDefault(); 
