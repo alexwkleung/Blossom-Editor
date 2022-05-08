@@ -186,8 +186,10 @@ const createWindow = (): void => {
         mainWindow.hide();
       } 
       if(response == 2) {
-        //if button == 'Quit', then kill the process.
-        //this is a workaround to allow the above terminal hack to work. without it, you won't be able to quit the app at all.
+        //if button == 'Quit', then kill the process (SIGKILL).
+        //this is a workaround to allow the above terminal hack to work. 
+        //without it, you won't be able to quit the app unless you do a force quit.
+        //that's not good, so sending a signal kill is the *best way* to combat the issue.
         execSh("kill -9 " + process.pid)
       }
   });
