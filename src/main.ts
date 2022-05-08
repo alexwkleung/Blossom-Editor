@@ -10,7 +10,7 @@ import os from 'os';
 
 //import * as path from 'path';
 
-const createWindow = () => {
+const createWindow = (): void => {
     //create new browser window with specific width + height dimensions
     const mainWindow = new BrowserWindow({
         width: 1650, //prev: 1440
@@ -148,12 +148,12 @@ const createWindow = () => {
         //env: process.env
     });
 
-    ptyProcess.on('data', function(data: any) {
+    ptyProcess.on('data', (data: any): void  => {
         mainWindow.webContents.send("terminal.incoming", data);
         //console.log("Terminal Incoming Data Sent");
     });
 
-    ipcMain.on("terminal.keystroke", (event, key) => {
+    ipcMain.on("terminal.keystroke", (event, key): void => {
         ptyProcess.write(key);
     });
 
