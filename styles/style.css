@@ -99,7 +99,8 @@ select {
 */
 
 #preview {
-    background-color: #757575;
+    background-color: #BDBDBD;
+    opacity: 1;
     border: 0;
     width: 50%;
     display: none;
