@@ -70,6 +70,7 @@ summary {
 
 #terminal {
     display: flex;
+    flex-direction: row;
 }
 
 ::-webkit-scrollbar {
@@ -100,4 +101,6 @@ select {
 #preview {
     background-color: #757575;
     border: 0;
+    width: 50%;
+    display: none;
 }
