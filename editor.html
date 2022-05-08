@@ -118,6 +118,10 @@
 <button title="undo selection" type="button" onclick="undo()"><img src="src/img/undo.png"></button>
 <button title="redo selection" type="button" onclick="redo()"><img src="src/img/redo.png"></button>
 
+<button title="kill line" type="button" accesskey="k" onclick="killLine()"><img src="src/img/kill-line.png"></button>
+
+<button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
+
 <button title="change theme" type="button">
   <select onchange="selectTheme()" id=select>
     <!-- theme options -->
@@ -144,11 +148,11 @@
   </select>
 </button>
 
-<button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
-<button title="kill line" type="button" accesskey="k" onclick="killLine()"><img src="src/img/kill-line.png"></button>
+<button title="show/hide terminal" type="button" accesskey="z" onclick="hideShowTerminal();"><img src="src/img/terminal.png"></button>
+<button id="hideshowpreview" title="show/hide preview window" type="button" accesskey="x" onclick="hideShowPreview();"><img src="src/img/preview.png"></button>
+
+<button id="hideshowbutton" title="hide/show shortcut buttons" type="button" accesskey="c" onclick="hideShowButtons()"><img src="src/img/hidebuttons.png"></button>
 <button title="refresh/clear editor" type="button" accesskey="l" onclick="window.location.reload()"><img src="src/img/clear.png"></button>
-<button id="hideshowpreview" title="show/hide preview window" type="button" accesskey="x" onclick="hideShowPreview()"><img src="src/img/preview.png"></button>
-<button id="hideshowbutton" title="hide/show shortcut buttons" type="button" accesskey="z" onclick="hideShowButtons()"><img src="src/img/hidebuttons.png"></button>
 </div>
 </div>
 </div>

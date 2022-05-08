@@ -15,3 +15,12 @@ function hideShowPreview() {
         hidePrevDiv.style.display = "block";
     }
 };
+
+function hideShowTerminal() {
+  const hideTerminal = document.getElementsByClassName('xterm-screen')[0];
+  if(hideTerminal.style.display === "none") {
+    hideTerminal.style.display = "block";
+  } else {
+    hideTerminal.style.display = "none";
+  }
+};
