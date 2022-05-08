@@ -192,39 +192,39 @@ const createWindow = (): void => {
       }
   });
 
-  //log current process pid 
-  if (process.pid) {
-    console.log("Current pid of app: " + process.pid);
-  }
+    //log current process pid 
+    if(process.pid) {
+      console.log("Current pid of app: " + process.pid);
+    }
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows
 app.whenReady().then(() => {
     createWindow();
 
-    //MacOS: re-create window when dock icon is clicked and no other windows are open 
-    app.on('activate', () => {
-        if(BrowserWindow.getAllWindows().length === 0) {
-            createWindow();
-        }
-    })
+//MacOS: re-create window when dock icon is clicked and no other windows are open 
+app.on('activate', () => {
+  if(BrowserWindow.getAllWindows().length === 0) {
+    createWindow();
+   }
+})
     
-    //quit app when window is closed (windows + linux) except on MacOS
-    app.on('window-all-closed', () => {
-        if(process.platform !== 'darwin') {
-            app.quit();
-        }
-    });
+//quit app when window is closed (windows + linux) except on MacOS
+app.on('window-all-closed', () => {
+  if(process.platform !== 'darwin') {
+    app.quit();
+   }
+});
 
-    //disable refresh shortcut (command + r or control + r)
-    app.on('browser-window-focus', function() {
-        electronLocalshortcut.register("CommandOrControl+R", () => {
-            console.log("CommandOrControl+R: Reload Disabled");
-        })
-    });
+//disable refresh shortcut (command + r or control + r)
+app.on('browser-window-focus', function() {
+    electronLocalshortcut.register("CommandOrControl+R", () => {
+    console.log("CommandOrControl+R: Reload Disabled");
+   })
+});
 
-    //creates a new tab upon clicking the new tab button. depends on tabbingIdentifier for native macOS tab bar (safari-like)
-    app.on('new-window-for-tab', function() {
-        createWindow();
-    })
+//creates a new tab upon clicking the new tab button. depends on tabbingIdentifier for native macOS tab bar (safari-like)
+app.on('new-window-for-tab', function() {
+    createWindow();
+  })
 });
