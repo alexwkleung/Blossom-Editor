@@ -49,6 +49,7 @@
 <!-- xtermjs script -->
 <script src="node_modules/xterm/lib/xterm.js"></script>
 
+<div id="hide">
 <!-- shortcut help button -->
 <div class="border-shortcut">
   <div class="button-center-shortcut">
@@ -84,6 +85,9 @@
     <br>
     <br>
     10) [Control+K] or [Control+Option+K] or [Control+Option+Shift+K]: Emacs-style kill line.
+    <br>
+    <br>
+    11) [Control+Option+X] or [Control+Option+Shift+X]: Hide/show shortcut buttons.
     </p>
     </details>
     </button>
@@ -134,6 +138,9 @@
 <button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button title="kill line" type="button" accesskey="k" onclick="killLine()"><img src="src/img/kill-line.png"></button>
 <button title="refresh/clear editor" type="button" accesskey="l" onclick="window.location.reload()"><img src="src/img/clear.png"></button>
+<button title="hide shortcut buttons" type="button" accesskey="x" onclick="hide()"><img src="src/img/hide.png"></button>
+</div>
+</div>
 </div>
 
 <!-- xtermjs terminal -->
@@ -165,6 +172,9 @@
 
 <!-- kill line -->
 <script src="src/scripts/kill-line.ts"></script>
+
+<!-- hide -->
+<script src="src/scripts/hide.ts"></script>
 
 <!-- renderer -->
 <script src="src/renderer.js"></script>
