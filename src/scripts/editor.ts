@@ -41,6 +41,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     const mode = modeInput.options[modeInput.selectedIndex].textContent;
     editor.setOption("mode", mode);
 
+    //preview 
     let delay = 0;
 
     editor.on("change", function() {
