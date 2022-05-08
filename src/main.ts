@@ -132,7 +132,7 @@ const createWindow = (): void => {
       mainWindow.webContents.on('did-finish-load', mainWindowReady);
 
       function mainWindowReady() {
-        console.log('Renderer Process Ready');
+        console.log('Renderer process ready');
       }
 
       //show window after render process is ready
