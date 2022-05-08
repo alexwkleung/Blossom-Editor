@@ -22,6 +22,7 @@ body {
 }
  
 select { 
+    font-family: 'IBM Plex Sans', 'sans-serif'; 
     height: 48px; 
     width: 125px; 
 }
@@ -29,10 +30,6 @@ select {
 .mode { 
     height: 48px; 
     width: 135px; 
-}
-  
-select { 
-    font-family: 'IBM Plex Sans', 'sans-serif'; 
 }
   
 .button-center-shortcut { 
@@ -71,6 +68,7 @@ summary {
 #terminal {
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -106,3 +104,9 @@ select {
     display: none;
     pointer-events: none;
 }
+
+/*
+.xterm-screen {
+    display: block;
+}
+*/
