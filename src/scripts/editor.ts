@@ -40,4 +40,20 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   function selectMode() {
     const mode = modeInput.options[modeInput.selectedIndex].textContent;
     editor.setOption("mode", mode);
+
+    let delay = 0;
+
+    editor.on("change", function() {
+      clearTimeout(delay);
+      delay = setTimeout(updatePreview, 200);
+    });
+    
+    function updatePreview() {
+      var previewFrame = document.getElementById('preview');
+      var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+      preview.open();
+      preview.write(editor.getValue());
+      preview.close();
+    }
+    setTimeout(updatePreview, 200);
   }

@@ -86,3 +86,18 @@ button {
 select {
     background-color: rgb(199, 197, 197);
 }
+
+/*
+#hidebuttons {
+    display: none;
+}
+
+#hidepreview {
+    display: none;
+}
+*/
+
+#preview {
+    background-color: #757575;
+    border: 0;
+}
