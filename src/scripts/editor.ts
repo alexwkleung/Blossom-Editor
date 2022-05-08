@@ -58,7 +58,7 @@ function previewUpdate() {
    //parse markdown to html
     const parse = marked.parse(editor.getValue());
 
-    //write parsed markdown to preview iframe
+    //write parsed markdown to iframe preview
     preview.open();
     preview.write(parse);
     preview.close();
