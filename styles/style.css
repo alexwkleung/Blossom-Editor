@@ -78,3 +78,11 @@ summary {
     display: none;
     background-color: transparent;
 }
+
+button {
+    background-color: rgb(199, 197, 197);
+}
+
+select {
+    background-color: rgb(199, 197, 197);
+}
