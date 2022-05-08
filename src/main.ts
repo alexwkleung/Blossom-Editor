@@ -6,6 +6,10 @@ const pty = require('node-pty');
 
 import os from 'os';
 
+import execSh from 'exec-sh';
+
+import process from 'process'; //const process = require('process'); 
+
 //import { globalShortcut } from 'electron';
 
 //import * as path from 'path';
@@ -167,18 +171,30 @@ const createWindow = (): void => {
     //credit: https://stackoverflow.com/questions/69233432/electron-app-close-dialog-with-message-box-confirmation (by Menma)
     mainWindow.on('close', (e) => {
       let response = dialog.showMessageBoxSync(mainWindow, {
-          type: 'question',
-          buttons: ['Yes', 'No'],
+          type: 'info',
+          buttons: ['Yes', 'No', 'Quit App'],
           title: 'Confirm',
-          message: 'Are you sure you want to close?'
+          message: 'Are you sure you want to close? '
       });
       if(response == 1) {
+        //if button == 'No', then cancel the window close.
         e.preventDefault(); 
       } else {
+        //if button == 'Yes', then "close the window" and hide it. 
         e.preventDefault();
         mainWindow.hide();
+      } 
+      if(response == 2) {
+        //if button == 'Quit', then kill the process.
+        //this is a workaround to allow the above terminal hack to work. without it, you won't be able to quit the app at all.
+        execSh("kill -9 " + process.pid)
       }
   });
+
+  //log current process pid 
+  if (process.pid) {
+    console.log("Current pid of app: " + process.pid);
+  }
 };
 
 //method is called when electron is finished initialization and is ready to create browser windows
