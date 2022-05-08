@@ -41,24 +41,26 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     const mode = modeInput.options[modeInput.selectedIndex].textContent;
     editor.setOption("mode", mode);
 
-    //preview html + markdown 
-    let delay = 0;
+  //add preview delay
+  let delay = 0;
 
-    editor.on("change", function() {
-      clearTimeout(delay);
-      delay = setTimeout(updatePreview, 200);
-    });
-  }
+  editor.on("change", () => {
+     clearTimeout(delay);
+     delay = setTimeout(previewUpdate, 200);
+  });
+}
 
-  function updatePreview() {
-    const previewFrame = document.getElementById('preview');
-    const preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+//preview html + markdown 
+function previewUpdate() {
+   const previewFrame = document.getElementById('preview');
+   const preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
 
-    //parse markdown to html
+   //parse markdown to html
     const parse = marked.parse(editor.getValue());
 
+    //write parsed markdown to preview iframe
     preview.open();
     preview.write(parse);
     preview.close();
   }
-  setTimeout(updatePreview, 200);
+  setTimeout(previewUpdate, 200);

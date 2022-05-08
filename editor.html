@@ -46,6 +46,7 @@
 <script type="text/javascript" src="typescript-compile/js/typescript.min.js"></script>
 <script type="text/javascript" src="typescript-compile/js/typescript.compile.min.js"></script>
 
+<!-- marked markdown parser -->
 <script src="marked/marked.min.js"></script>
 
 <!-- xtermjs script -->
@@ -92,7 +93,7 @@
     11) [Control+Option+Z] or [Control+Option+Shift+Z]: Hide/show shortcut buttons.
     <br>
     <br>
-    12) [Control+Option+X] or [Control+Option+Shift+X]: Hide/show preview section.
+    12) [Control+Option+X] or [Control+Option+Shift+X]: Show/hide preview window.
     </p>
     </details>
     </button>
@@ -143,8 +144,8 @@
 <button title="toggle fullscreen" type="button" accesskey="f" onclick="toggleFullScreen()"><img src="src/img/fullscreen.png"></button>
 <button title="kill line" type="button" accesskey="k" onclick="killLine()"><img src="src/img/kill-line.png"></button>
 <button title="refresh/clear editor" type="button" accesskey="l" onclick="window.location.reload()"><img src="src/img/clear.png"></button>
-<button id="hidebuttons" title="hide shortcut buttons" type="button" accesskey="z" onclick="hideButtons()"><img src="src/img/hidebuttons.png"></button>
-<button id="hidepreview" title="hide preview" type="button" accesskey="x" onclick="hidePreview()"><img src="src/img/hidepreview.png"></button>
+<button id="hideshowpreview" title="show/hide preview window" type="button" accesskey="x" onclick="hideShowPreview()"><img src="src/img/preview.png"></button>
+<button id="hideshowbutton" title="hide/show shortcut buttons" type="button" accesskey="z" onclick="hideShowButtons()"><img src="src/img/hidebuttons.png"></button>
 </div>
 </div>
 </div>
