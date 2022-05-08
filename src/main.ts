@@ -2,7 +2,7 @@ import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions, dialog }
 
 import electronLocalshortcut from 'electron-localshortcut';
 
-const pty = require('node-pty');
+import * as pty from 'node-pty' //const pty = require('node-pty'); 
 
 import os from 'os';
 
@@ -176,6 +176,7 @@ const createWindow = (): void => {
           title: 'Confirm',
           message: 'Are you sure you want to close? '
       });
+
       if(response == 1) {
         //if button == 'No', then cancel the window close.
         e.preventDefault(); 
