@@ -114,3 +114,7 @@ select {
 .shortcut-inf {
     color: rgb(0, 17, 255);
 }
+
+*:focus {
+    outline: none;
+}
