@@ -186,7 +186,7 @@ const createWindow = (): void => {
         mainWindow.hide();
       } 
       if(response == 2) {
-        //if button == 'Quit', then kill the process (SIGKILL).
+        //if button == 'Quit', then kill the process (send SIGKILL).
         //this is a workaround to allow the above terminal hack to work. 
         //without it, you won't be able to quit the app unless you do a force quit.
         //that's not good, so sending a signal kill is the *best way* to combat the issue.
@@ -204,7 +204,7 @@ const createWindow = (): void => {
 app.whenReady().then(() => {
     createWindow();
 
-//MacOS: re-create window when dock icon is clicked and no other windows are open 
+//re-create window when dock icon is clicked and no other windows are open 
 app.on('activate', () => {
   if(BrowserWindow.getAllWindows().length === 0) {
     createWindow();
@@ -212,6 +212,7 @@ app.on('activate', () => {
 })
     
 //quit app when window is closed (windows + linux) except on MacOS
+//this is overridden by dialog method (?)
 app.on('window-all-closed', () => {
   if(process.platform !== 'darwin') {
     app.quit();
