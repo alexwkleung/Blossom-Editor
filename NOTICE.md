@@ -21,6 +21,12 @@ and limitations under the License.
 
 # Other Attributions
 
-The terminal is based off of [77Z](https://github.com/77Z/electron-local-terminal-prototype)'s electron-local-terminal-prototype project.
+**1)** The terminal is based off of [77Z](https://github.com/77Z/electron-local-terminal-prototype)'s electron-local-terminal-prototype project.
 
 I tweaked the implementation to make it work with the current versions of Electron, Node.js, and TypeScript for this project.
+
+**2)** Referenced/copied code from other resources are credited in their respective comments in the source code.
+
+# Any Concerns?
+
+If you have any concerns or issues with the licensing or attributions for this project, feel free to post an issue, a pull request with said changes, or create a new post under the discussions tab. I'll be glad to fix any errors for where credit is due.
