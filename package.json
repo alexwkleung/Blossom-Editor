@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "build/main.js",
-  "style": "codemirror/lib/codemirror.css",
   "license": "MIT",
-  "directories": {
-    "lib": "./lib"
-  },
   "scripts": {
     "build": "npx --build --clean",
     "electron": "npx electron .",
