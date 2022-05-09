@@ -49,7 +49,7 @@ summary {
     font-family: 'IBM Plex Sans', 'sans-serif'; 
 }
   
-.shortcut-p { 
+.shortcut-k { 
     text-align: left; 
 }
 
@@ -110,3 +110,7 @@ select {
     display: block;
 }
 */
+
+.shortcut-inf {
+    color: rgb(0, 17, 255);
+}
