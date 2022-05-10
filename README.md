@@ -36,9 +36,9 @@ It isn't perfect but it function decently well in my (biased) opinion.
 
 **1)** Since you'll be packaging the application yourself and running it, there will be no signature. 
 
-Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
+**2)** Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Everyone has different use cases. While this may work for others, it may not work for you.
+**3)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Everyone has different use cases. While this may work for others, it may not work for you.
 
 # Contributions
 
