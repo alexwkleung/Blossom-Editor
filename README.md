@@ -1,6 +1,6 @@
 # Blossom Editor
 
-![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey) ![Signed](https://img.shields.io/badge/Signed-No-critical)
+![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey) ![Signed]()
 
 Blossom Editor is a 2000s era inspired text-editor with a slight modern touch.
 
@@ -28,7 +28,7 @@ Created in the mind of a small appreciation project with a slight modern touch f
 
 This text-editor is seen as a subsitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a mini complement to your daily text-editor or IDE when you want to do miniscule things. 
 
-It isn't perfect but it function decently well in my (biased) opinion.
+It isn't perfect but it works decently well in my (biased) opinion.
 
 # Installation
 
@@ -36,13 +36,11 @@ It isn't perfect but it function decently well in my (biased) opinion.
 
 **1)** Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**2)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Everyone has different use cases. While this may work for others, it may not work for you.
+**2)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and very experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work for others, it may not work for you.
 
 # Contributions
 
 Your contributions are welcomed. I am certain that Blossom Editor could become more usable and stable for daily use once the core issues are sorted out. 
-
-If you have any problems, submit an issue. You may also talk about anything regarding the project in the dicussions tab. 
 
 # Vulnerabilities 
 
