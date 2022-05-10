@@ -27,7 +27,9 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@types/codemirror": "^5.60.5",
     "@types/marked": "^4.0.3",
+    "codemirror": "^5.65.3",
     "electron-localshortcut": "^3.2.1",
     "electron-osx-sign": "^0.6.0",
     "exec-sh": "^0.4.0",

@@ -2,7 +2,15 @@
     font-family: 'IBM Plex Sans';
     src: url("../fonts/IBMPlexSans-Bold.ttf") format("truetype");
 }
-  
+
+.CodeMirror {
+    font-family: monospace;
+    height: 300px;
+    color: black;
+    direction: ltr;
+    font-size: 14px;
+}
+
 body { 
     background-color: #545167;
     overflow-x: hidden;
