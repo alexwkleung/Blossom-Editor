@@ -167,7 +167,7 @@ const createWindow = (): void => {
     //not sure if this fix works for all Mac users using the app. however, it currently works the way i imagined it to be.
     //credit: https://stackoverflow.com/questions/41503873/cannot-prevent-window-close-in-electron (by Sudheer Gupta)
 
-    //use synchronous message box to wait for user to select an option before yes/no operations
+    //use synchronous message box to wait for user to select an option before yes/no/quit operations
     //credit: https://stackoverflow.com/questions/69233432/electron-app-close-dialog-with-message-box-confirmation (by Menma)
     mainWindow.on('close', (e) => {
       let response = dialog.showMessageBoxSync(mainWindow, {
