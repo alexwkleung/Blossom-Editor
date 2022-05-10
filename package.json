@@ -9,8 +9,6 @@
     "electron": "npx electron .",
     "rebuild": "electron-rebuild",
     "package": "npx electron-packager ./ blossom-editor --platform=darwin --arch=x64 --icon=twemoji-14.0-blossom.icns --overwrite && electron-installer-dmg ./blossom-editor-darwin-x64/blossom-editor.app blossom-editor",
-    "dmg": "electron-installer-dmg ./blossom-editor-darwin-x64/blossom-editor.app blossom-editor",
-    "sign": "electron-osx-sign ./blossom-editor-darwin-x64/blossom-editor.app"
   },
   "bugs": "https://github.com/alexwkleung/Blossom-Editor/issues",
   "repository": {
@@ -31,7 +29,6 @@
     "@types/marked": "^4.0.3",
     "codemirror": "^5.65.3",
     "electron-localshortcut": "^3.2.1",
-    "electron-osx-sign": "^0.6.0",
     "exec-sh": "^0.4.0",
     "marked": "^4.0.15",
     "node-pty": "^0.10.1",
