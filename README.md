@@ -28,7 +28,7 @@ Created in the mind of a small appreciation project with a slight modern touch f
 
 This text-editor is seen as a subsitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a mini complement to your daily text-editor or IDE when you want to do miniscule things. 
 
-It isn't perfect but it does function decently well.
+It isn't perfect but it function decently well in my (biased) opinion.
 
 # Installation
 
