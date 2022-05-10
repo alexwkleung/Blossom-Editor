@@ -1,8 +1,19 @@
+# Table of Contents
+
+1. [Blossom Editor](#blossom-editor)
+2. [Why](#why)
+3. [Warnings](#warnings)
+4. [Installation](#installation)
+5. [Contributions](#contributions)
+6. [License & Attributions](#license--attributions)
+
 # Blossom Editor
 
 ![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey) ![Signed](https://img.shields.io/badge/Code%20Signed-No-critical)
 
-Blossom Editor is a 2000s era inspired text-editor with a slight modern touch.
+Blossom Editor is a 2000s era inspired text-editor with a slight modern touch. 
+
+This text-editor is seen as a subsitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a mini complement to your daily text-editor or IDE when you want to do miniscule things. 
 
 **Created with:**
 
@@ -22,13 +33,15 @@ Blossom Editor is a 2000s era inspired text-editor with a slight modern touch.
 
 # Why 
 
-I believe that the 2000s era was the most influential timeframe in the technology world. Now of course that's just a simplification of the gist. All sorts of usable and reasonable advancements being pushed to the mainstream, making lives easier compared to the previous era's is something that we don't appreciate enough in the current day.
+This project was created as a small appreciation with a slight modern touch for usability and feel. I hope some would enjoy this for whatever reason.
 
-Created in the mind of a small appreciation project with a slight modern touch for usability, I hope that some would enjoy this.
+It isn't perfect but it works decently well in my opinion.
 
-This text-editor is seen as a subsitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a mini complement to your daily text-editor or IDE when you want to do miniscule things. 
+The 2000s era was a time that had many emerging technologies (both hardware and software) that people had never seen or used before. These times gave a hint of "realistically moving to an ever growing technological world". The growth of some of those technologies heavily sprouted strong into the 2010s+ and are now a vital piece in our daily lives. Appreciating the 2000s era for bringing those technologies to a new start of a "modern" world - surpassing the past era's, was a huge leap in cutting-edge and bleeding-edge technology that I sometimes cannot believe has happened. Whether or not this was a blessing or a curse, we would have to accept the outcome no matter what.
 
-It isn't perfect but it works decently well in my (biased) opinion.
+I am a little biased here as you can tell. However the points are somewhat reasonable but not 100% agreeable in my opinion. I'm not trying to look down on any era of technological advancement since they are all very important to the current day. I mainly wanted to point out the era that *I believe* showed people that the unknowns of cutting-edge technologies were here to stay and improve our lives. Thus, with time, we saw that it worked out somewhat well if we think about the positive side of it.
+
+While this text-editor may seem more modern instead of a 2000s era inspired application, I tried to balance it as best as I could.
 
 # Warnings
 
