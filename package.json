@@ -27,9 +27,11 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@types/marked": "^4.0.3",
     "electron-localshortcut": "^3.2.1",
     "electron-osx-sign": "^0.6.0",
     "exec-sh": "^0.4.0",
+    "marked": "^4.0.15",
     "node-pty": "^0.10.1",
     "tslib": "^2.4.0",
     "xterm": "^4.18.0"
