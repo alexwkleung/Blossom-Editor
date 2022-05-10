@@ -32,7 +32,9 @@ It isn't perfect but it function decently well in my (biased) opinion.
 
 # Installation
 
-# Warning 
+# Warnings
+
+**1)** Since you'll be packaging the application yourself and running it, there will be no signature. 
 
 Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
