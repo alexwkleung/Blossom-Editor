@@ -34,11 +34,9 @@ It isn't perfect but it function decently well in my (biased) opinion.
 
 # Warnings
 
-**1)** Since you'll be packaging the application yourself and running it, there will be no signature. 
+**1)** Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**2)** Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
-
-**3)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Everyone has different use cases. While this may work for others, it may not work for you.
+**2)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Everyone has different use cases. While this may work for others, it may not work for you.
 
 # Contributions
 
@@ -50,6 +48,6 @@ If you have any problems, submit an issue. You may also talk about anything rega
 
 [MIT License](LICENSE).
 
-The [Apache 2.0 License](LICENSE-APACHE-2.0) is included merely for compatibility with the typescript-compile library, but this project will be based on the MIT License.
+The [Apache 2.0 License](LICENSE-APACHE-2.0) is included merely for compatibility with the typescript-compile library and electron-installer-dmg package, but this project will be based on the MIT License.
 
 Please read [NOTICE.md](NOTICE.md) regarding license attributions and other attributions for this project.
