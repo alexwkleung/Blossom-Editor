@@ -144,12 +144,35 @@ const createWindow = (): void => {
       //credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
       const shell = os.platform() === 'darwin' ? "bash" : "bash"
 
+      /* 
+      * fix for process.env but it won't be used here. *  
+      * you may however take a deeper dive into it. *
+      * beware that you'll have to dig through the node-pty source code. * 
+    
+      * credit (the only post regarding this issue): https://stackoverflow.com/questions/72133247/whats-the-proper-way-to-fix-this-type-error
+
+
+      interface definedEnv {
+        [key: string]: string
+      }
+      
+      const safeEnv = () => {
+        let o:definedEnv = {};
+        for(const [key, value] of Object.keys(process.env).entries()) {
+          o[key] = value ?? "";
+          return o;
+        }
+      }
+      */
+      
+      //profile is based on .bashrc
+      //if any issues arise (for whatever reason) regarding environment variables, then see above.
       const ptyProcess = pty.spawn(shell, [], {
         name: "xterm-color",
         cols: 80,
         rows: 24,
         cwd: process.env.HOME,
-        //env: process.env
+        //env: process.env /* process.env does not work. call safeEnv(); see above. */
     });
 
     ptyProcess.on('data', (data: any): void  => {
