@@ -5,4 +5,4 @@ function loadfile(input) {
       editor.setValue(e.target.result);
     }
     reader.readAsText(input.files[0]);
-}
+};

@@ -29,7 +29,8 @@ const createWindow = (): void => {
             contextIsolation: false,
             //preload: path.join(__dirname, 'build/preload.js'),
         }
-    })
+    });
+    
     //load index.html to app window
     mainWindow.loadFile('editor.html')
 
@@ -51,7 +52,7 @@ const createWindow = (): void => {
                 //preload: path.join(__dirname, 'build/preload.js')
             }
           }
-      })
+      });
 
       //menu bar fix for typescript
       //credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript (by jkmartindale)
@@ -232,7 +233,7 @@ app.on('activate', () => {
   if(BrowserWindow.getAllWindows().length === 0) {
     createWindow();
    }
-})
+});
     
 //quit app when window is closed (windows + linux) except on MacOS
 //this is overridden by dialog method (?)

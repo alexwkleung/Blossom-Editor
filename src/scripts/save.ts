@@ -16,4 +16,4 @@ function save() {
     downloadLink.href = window.webkitURL.createObjectURL(blob);
     }
     downloadLink.click();
-}
+};

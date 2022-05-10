@@ -14,18 +14,19 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   //theme switching
   //credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
   const input = document.getElementById("select");
+  
   function selectTheme() {
     const theme = input.options[input.selectedIndex].textContent;
     editor.setOption("theme", theme);
     location.hash = "#" + theme;
-  }
+  };
 
   const choice = (location.hash && location.hash.slice(1)) || (document.location.search && decodeURIComponent(document.location.search.slice(1)));
   
   if(choice) {
     input.value = choice;
     editor.setOption("theme", choice);
-  }
+  };
 
   CodeMirror.on(window, "hashchange", function() {
     const theme = location.hash.slice(1);
@@ -49,7 +50,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
      clearTimeout(delay);
      delay = setTimeout(previewUpdate, 200);
   });
-}
+};
 
 //preview html + markdown 
 //html preview credit: https://github.com/codemirror/CodeMirror/blob/master/demo/preview.html
@@ -64,5 +65,5 @@ function previewUpdate() {
     preview.open();
     preview.write(parse);
     preview.close();
-  }
+  };
   setTimeout(previewUpdate, 200);
