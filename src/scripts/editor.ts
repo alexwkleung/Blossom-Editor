@@ -42,6 +42,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     editor.setOption("mode", mode);
 
   //add preview delay
+  //html preview credit: https://github.com/codemirror/CodeMirror/blob/master/demo/preview.html
   let delay = 0;
 
   editor.on("change", () => {
@@ -51,6 +52,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
 }
 
 //preview html + markdown 
+//html preview credit: https://github.com/codemirror/CodeMirror/blob/master/demo/preview.html
 function previewUpdate() {
    const previewFrame = document.getElementById('preview');
    const preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
