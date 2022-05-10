@@ -22,7 +22,7 @@ Blossom Editor is a 2000s era inspired text-editor with a slight modern touch.
 
 # Why 
 
-I believe that the 2000s era was the most influential and memorable timeframe in terms of technology. Now of course that's just a simplification of the gist. All sorts of usable/reasonable advancements being pushed to the mainstream, making lives easier compared to the previous era's is something that some of us don't appreciate enough in the current era. 
+I believe that the 2000s era was the most influential timeframe in the technology world. Now of course that's just a simplification of the gist. All sorts of usable and reasonable advancements being pushed to the mainstream, making lives easier compared to the previous era's is something that we don't appreciate enough in the current day.
 
 Created in the mind of a small appreciation project with a slight modern touch for usability, I hope that some would enjoy this.
 
@@ -32,17 +32,17 @@ It isn't perfect but it works decently well in my (biased) opinion.
 
 # Warnings
 
-**1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed.
+**1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed, so beware of any vulnerabilities or issues that may arise.
 
-**1)** Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
+**1)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**2)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and very experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work for others, it may not work for you.
+**2)** You are liable for any file loss or damage. Keep in mind that this is a proof-of-concept and experimental project, so nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work for others, it may not work for you.
 
 # Installation
 
 # Contributions
 
-Your contributions are welcomed. I am certain that Blossom Editor could become more usable and stable for daily use once the core issues are sorted out. 
+Your contributions are welcomed. Blossom Editor definitely could become more usable and stable for daily use once the core issues are sorted out.
 
 # License & Attributions
 
