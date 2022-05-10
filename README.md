@@ -42,8 +42,6 @@ It isn't perfect but it works decently well in my (biased) opinion.
 
 Your contributions are welcomed. I am certain that Blossom Editor could become more usable and stable for daily use once the core issues are sorted out. 
 
-# Vulnerabilities 
-
 # License & Attributions
 
 [MIT License](LICENSE).
