@@ -1,6 +1,6 @@
 # Blossom Editor
 
-![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey) ![Signed]()
+![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey) ![Signed](https://img.shields.io/badge/Code%20Signed-No-critical)
 
 Blossom Editor is a 2000s era inspired text-editor with a slight modern touch.
 
@@ -30,13 +30,15 @@ This text-editor is seen as a subsitute for your built-in notepad app, doing qui
 
 It isn't perfect but it works decently well in my (biased) opinion.
 
-# Installation
-
 # Warnings
+
+**1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed.
 
 **1)** Due to the lack of a proper load, save, file manager/explorer, and other factors, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
 **2)** You are liable for any file loss or damage. Keep in mind that since this is a proof-of-concept and very experimental, nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work for others, it may not work for you.
+
+# Installation
 
 # Contributions
 
