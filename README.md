@@ -44,6 +44,8 @@ Your contributions are welcomed. I am certain that Blossom Editor could become m
 
 If you have any problems, submit an issue. You may also talk about anything regarding the project in the dicussions tab. 
 
+# Vulnerabilities 
+
 # License & Attributions
 
 [MIT License](LICENSE).
