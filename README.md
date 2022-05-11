@@ -44,7 +44,7 @@ This text-editor is seen as a subsitute for your built-in notepad app, doing qui
 
 # Contributions
 
-Contributions are welcomed. Blossom Editor could become more usable and stable for daily use once the core issues are sorted out.
+Contributions are welcomed.
 
 # License & Attributions
 
