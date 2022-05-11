@@ -40,7 +40,53 @@ This text-editor is seen as a subsitute for your built-in notepad app, doing qui
 
 **3)** There might be slight performance issues since I haven't done any proper optimizations. Expect variable RAM usage and fans to kick in depending on your system specs.
 
+# Pre-Requisites
+
+To be able to use tabs in Blossom Editor, you must set prefer tabs to always. This is located in your System Preferences:
+
+System Preferences >> General >> Prefer tabs >> "always" when opening documents
+
+![Tabs](img/tabs.png)
+
+Without enabling this, your new tabs will become separate windows.
+
 # Installation
+
+Clone the repository
+
+```bash
+git clone <SSH/HTTPS>
+```
+
+Change directory
+
+```bash
+cd Blossom-Editor
+```
+
+Install npm dependencies
+
+```bash
+npm install
+```
+
+Build package and create the `.dmg`
+
+```bash
+make package
+#or
+npm run package
+```
+
+Open `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
+
+![dmg](img/dmg.png)
+
+Don't forget to eject the `.dmg`. This will most likely be located in your Desktop.
+
+![eject1](img/eject1.png)
+
+![eject1](img/eject2.png)
 
 # Contributions
 
