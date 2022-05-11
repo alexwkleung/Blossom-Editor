@@ -38,7 +38,7 @@ This text-editor is seen as a subsitute for your built-in notepad app, doing qui
 
 **3)** You are liable for any file loss or damage. Keep in mind that this is a proof-of-concept and experimental project, so nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work well for others, it may not work for you.
 
-**3)** There may be slight performance issues due to the app being a little heavy. It'll work, no doubt, but be prepared for those fans to kick in.
+**3)** There might be slight performance issues since I haven't done any proper optimizations. Expect variable RAM usage and fans to kick in depending on your system specs.
 
 # Installation
 
