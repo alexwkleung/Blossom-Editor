@@ -47,9 +47,11 @@ While this text-editor may seem more modern instead of a 2000s era inspired appl
 
 **1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed, so beware of any vulnerabilities or issues that may arise.
 
-**1)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
+**2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**2)** You are liable for any file loss or damage. Keep in mind that this is a proof-of-concept and experimental project, so nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work for others, it may not work for you.
+**3)** You are liable for any file loss or damage. Keep in mind that this is a proof-of-concept and experimental project, so nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work for others, it may not work for you.
+
+**3)** There may be slight performance issues due to the app being a little heavy. I'll work, no doubt, but be prepared for those fans to kick in.
 
 # Installation
 
