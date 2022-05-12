@@ -26,7 +26,7 @@ This text-editor is seen as a substitute for your built-in notepad app, doing qu
 
 - Markdown Parser: Marked
 
-- Other: exec-sh, typescript-compile
+- Other: exec-sh
 
 - Icon: Twemoji 14.0 - Cherry Blossom
 
