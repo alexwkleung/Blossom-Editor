@@ -12,7 +12,7 @@
 
 Blossom Editor is a 2000s era inspired text-editor with a slight modern touch. 
 
-This text-editor is seen as a subsitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a mini complement to your daily text-editor or IDE when you want to do miniscule things. 
+This text-editor is seen as a substitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a complement to your daily text-editor or IDE when you want to do miniscule things. 
 
 **Created with:**
 
