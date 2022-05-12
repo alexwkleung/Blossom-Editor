@@ -30,6 +30,13 @@ This text-editor is seen as a subsitute for your built-in notepad app, doing qui
 
 - Icon: Twemoji 14.0 - Cherry Blossom
 
+Sample screenshots.
+
+![one](img/one.png)
+![two](img/two.png)
+![three](img/three.png)
+![four](img/four.png)
+
 # Warnings
 
 **1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed, so beware of any vulnerabilities or issues that may arise upon installation.
