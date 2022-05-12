@@ -30,6 +30,10 @@ This text-editor is seen as a subsitute for your built-in notepad app, doing qui
 
 - Icon: Twemoji 14.0 - Cherry Blossom
 
+The themes that come with Blossom Editor are slightly and/or heavily modified versions of CodeMirror's default themes that I found to fit best: duotone-dark, zenburn, 3024-night, paraiso-dark, gruvbox-dark, abcdef, and xq-dark, respectively.
+
+Duotone-dark was the theme I initially chose to be the default for Blossom-Editor, and thus modified it accordingly. I like blinking block cursors and the purple-greyish colours, so Duotone-dark was the perfect match as a base.
+
 Sample screenshots.
 
 ![one](img/one.png)
