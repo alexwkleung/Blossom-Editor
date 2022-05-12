@@ -1,3 +1,5 @@
+'use strict'
+
 //credit: https://stackoverflow.com/questions/51315044/how-do-i-save-the-content-of-the-editor-not-the-whole-html-page
 function save() {
     const write = editor.getValue();

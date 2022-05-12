@@ -1,3 +1,5 @@
+'use strict'
+
 function hideShowButtons() {
   const hideButtonDiv = document.getElementById('hideButtons');
   if(hideButtonDiv.style.display === "none") {

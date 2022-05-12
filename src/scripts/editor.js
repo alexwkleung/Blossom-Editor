@@ -1,3 +1,5 @@
+'use strict'
+
 const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
     lineNumbers: true,
     mode: "text/plain",
