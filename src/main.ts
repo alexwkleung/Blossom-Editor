@@ -2,15 +2,13 @@ import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions, dialog }
 
 import electronLocalshortcut from 'electron-localshortcut';
 
-import * as pty from 'node-pty' //const pty = require('node-pty'); 
+import * as pty from 'node-pty'
 
 import os from 'os';
 
 import execSh from 'exec-sh';
 
-import process from 'process'; //const process = require('process'); 
-
-//import { globalShortcut } from 'electron';
+import process from 'process';
 
 //import * as path from 'path';
 
@@ -23,7 +21,6 @@ const createWindow = (): void => {
         fullscreenable: true,
         tabbingIdentifier: 'new tab', 
         show: false,
-        //frame: false,
         webPreferences: { 
             nodeIntegration: true,
             contextIsolation: false,
@@ -44,7 +41,6 @@ const createWindow = (): void => {
                 fullscreenable: true,
                 tabbingIdentifier: 'new tab', 
                 show: false,
-                //frame: false,
             },
             webPreferences: { 
               nodeIntegration: true,
@@ -145,7 +141,7 @@ const createWindow = (): void => {
       const shell = os.platform() === 'darwin' ? "bash" : "bash"
 
       //fix for process.env
-      //credit (the only post regarding this issue): https://stackoverflow.com/questions/72133247/whats-the-proper-way-to-fix-this-type-error
+      //credit: https://stackoverflow.com/questions/72133247/whats-the-proper-way-to-fix-this-type-error
 
       interface definedEnv {
         [key: string]: string
@@ -181,7 +177,6 @@ const createWindow = (): void => {
     //mainWindow.hide() fixes the error "... Uncaught Exception: TypeError: Object has been destroyed ...".
     //the terminals are synced across tabs and are not separate processes. 
     //thus, closing a tab will destroy the correlated terminal object and cause the app to break.
-    //not sure if this fix works for all Mac users using the app. however, it currently works the way i imagined it to be.
 
     mainWindow.on('close', (e) => {
       let response = dialog.showMessageBoxSync(mainWindow, {

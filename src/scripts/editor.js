@@ -1,6 +1,6 @@
 'use strict'
 
-const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+const editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
     lineNumbers: true,
     mode: "text/plain",
     theme: 'duotone-dark',
@@ -15,7 +15,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
 
   //theme switching
   //credit: https://github.com/codemirror/CodeMirror/blob/master/demo/theme.html
-  const input = document.getElementById("select");
+  const input = document.getElementById('select');
   
   function selectTheme() {
     const theme = input.options[input.selectedIndex].textContent;
@@ -39,7 +39,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   });
 
   //mode switching
-  const modeInput = document.getElementById("mode");
+  const modeInput = document.getElementById('mode');
   function selectMode() {
     const mode = modeInput.options[modeInput.selectedIndex].textContent;
     editor.setOption("mode", mode);
@@ -55,7 +55,6 @@ const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
 };
 
 //preview html + markdown 
-//html preview credit: https://github.com/codemirror/CodeMirror/blob/master/demo/preview.html
 function previewUpdate() {
    const previewFrame = document.getElementById('preview');
    const preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;

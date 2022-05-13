@@ -8,13 +8,12 @@ function save() {
   });
 
   const defaultSaveName = "blossom.txt";
-  const downloadLink = document.createElement("a");
+  const downloadLink = document.createElement('a');
 
   downloadLink.download = defaultSaveName;
   downloadLink.innerHTML = "Save File";
 
   if(window.webkitURL !== null) {
-    //"Chrome allows the link to be clicked without adding it to the DOM."
     downloadLink.href = window.webkitURL.createObjectURL(blob);
     }
     downloadLink.click();
