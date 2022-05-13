@@ -48,7 +48,7 @@ Sample screenshots.
 
 **2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**3)** You are liable for any file loss or damage. Keep in mind that this is a proof-of-concept and experimental project, so nothing about this is perfect in any way shape or form compared to current day text-editors. Also, everyone has different use cases. While this may work well for others, it may not work for you.
+**3)** You are liable for any file loss or damage. Keep in mind that this is an experimental project, so nothing about this is perfect in any way shape or form compared to current day text-editors. Everyone has different use cases as well. While this may work fine for others, it may not work for you.
 
 **3)** There might be slight performance issues since I haven't done any proper optimizations. Expect variable RAM usage and fans to kick in depending on your system specs.
 
