@@ -108,6 +108,6 @@ Contributions are welcomed.
 
 [MIT License](LICENSE).
 
-The [Apache 2.0 License](LICENSE-APACHE-2.0) is included merely for compatibility with the typescript-compile library and electron-installer-dmg package, but this project will be based on the MIT License.
+The [Apache 2.0 License](LICENSE-APACHE-2.0) is included merely for compatibility with the electron-installer-dmg package, but this project will be based on the MIT License.
 
 Please read [NOTICE.md](NOTICE.md) regarding license attributions and other attributions for this project in more detail.
