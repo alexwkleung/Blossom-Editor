@@ -142,7 +142,6 @@ const createWindow = (): void => {
       }) 
 
       //ipc - pty process terminal
-      //credit: https://github.com/77Z/electron-local-terminal-prototype (by 77Z)
       const shell = os.platform() === 'darwin' ? "bash" : "bash"
 
       //fix for process.env
@@ -153,10 +152,10 @@ const createWindow = (): void => {
       }
       
       const workingEnv = () => {
-        let o:definedEnv = {};
+        let pe:definedEnv = {};
         for(const [key, value] of Object.keys(process.env).entries()) {
-          o[key] = value ?? "";
-          return o;
+          pe[key] = value ?? "";
+          return pe;
         }
       }
       
@@ -183,10 +182,7 @@ const createWindow = (): void => {
     //the terminals are synced across tabs and are not separate processes. 
     //thus, closing a tab will destroy the correlated terminal object and cause the app to break.
     //not sure if this fix works for all Mac users using the app. however, it currently works the way i imagined it to be.
-    //credit: https://stackoverflow.com/questions/41503873/cannot-prevent-window-close-in-electron (by Sudheer Gupta)
 
-    //use synchronous message box to wait for user to select an option before yes/no/quit operations
-    //credit: https://stackoverflow.com/questions/69233432/electron-app-close-dialog-with-message-box-confirmation (by Menma)
     mainWindow.on('close', (e) => {
       let response = dialog.showMessageBoxSync(mainWindow, {
           type: 'info',
