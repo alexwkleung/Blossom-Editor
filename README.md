@@ -27,7 +27,7 @@ This text-editor is seen as a substitute for your built-in notepad app, doing qu
 
 - Markdown Parser: Marked
 
-- Other: exec-sh
+- Tools: exec-sh
 
 - Button Icons: Material Symbols 
 
