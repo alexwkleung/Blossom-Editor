@@ -4,6 +4,7 @@
 2. [Warnings](#warnings)
 3. [Installation](#installation)
 4. [Contributions](#contributions)
+5. [To-Do's](#to-dos)
 5. [License & Attributions](#license--attributions)
 
 # Blossom Editor
@@ -101,6 +102,10 @@ Open `blossom-editor.dmg` located in the root directory and drag the `blossom-ed
 # Contributions
 
 Contributions are welcomed.
+
+# To-Do's
+
+- Implement a proper load and save function to make it more stable for daily usage. At the moment, this is the biggest flaw with the app. 
 
 # License & Attributions
 
