@@ -93,7 +93,7 @@ make package
 npm run package
 ```
 
-Open `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
+Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
 
 ![dmg](img/dmg.png)
 
