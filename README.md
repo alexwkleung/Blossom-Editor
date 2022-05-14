@@ -8,7 +8,7 @@
 
 # Blossom Editor
 
-![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey) ![Signed](https://img.shields.io/badge/Code%20Signed-No-critical)
+![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey)
 
 Blossom Editor is a 2000s era inspired text-editor with a slight modern touch. 
 
@@ -46,7 +46,7 @@ Sample screenshots.
 
 # Warnings
 
-**1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed, so beware of any vulnerabilities or issues that may arise upon installation.
+**1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed.
 
 **2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
