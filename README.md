@@ -111,4 +111,4 @@ Contributions are welcomed.
 
 [MIT License](LICENSE).
 
-Please read [NOTICE.md](NOTICE.md) regarding attributions for this project.
+See [NOTICE.md](NOTICE.md) regarding attributions for this project.
