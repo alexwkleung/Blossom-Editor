@@ -50,8 +50,7 @@ const createWindow = (): void => {
           }
       });
 
-      //menu bar fix for typescript
-      //credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript (by jkmartindale)
+      //menu bar fix for typescript - credit: https://stackoverflow.com/questions/45811603/create-electron-menu-in-typescript (by jkmartindale)
       const mac = process.platform === 'darwin'
 
       const menu = Menu.buildFromTemplate(
@@ -156,7 +155,6 @@ const createWindow = (): void => {
       }
       
       //profile is based on .bashrc
-      //if any issues arise (for whatever reason) regarding environment variables, then see above.
       const ptyProcess = pty.spawn(shell, [], {
         name: "xterm-color",
         cols: 80,
