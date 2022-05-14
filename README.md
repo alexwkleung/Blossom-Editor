@@ -96,11 +96,7 @@ Open `blossom-editor.dmg` located in the root directory and drag the `blossom-ed
 
 ![dmg](img/dmg.png)
 
-Don't forget to eject the `.dmg`. This will most likely be located in your Desktop.
-
-![eject1](img/eject1.png)
-
-![eject1](img/eject2.png)
+**Note:** Don't forget to eject the `blossom-editor.dmg`.
 
 # Contributions
 
