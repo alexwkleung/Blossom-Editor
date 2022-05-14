@@ -94,16 +94,6 @@ select {
     background-color: rgb(199, 197, 197);
 }
 
-/*
-#hideshowpreview {
-    display: none;
-}
-
-#hideshowbutton {
-    display: none;
-}
-*/
-
 #preview {
     background-color: #BDBDBD;
     opacity: 1;
@@ -112,12 +102,6 @@ select {
     display: none;
     pointer-events: none;
 }
-
-/*
-.xterm-screen {
-    display: block;
-}
-*/
 
 .shortcut-inf {
     color: rgb(0, 17, 255);
