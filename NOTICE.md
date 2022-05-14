@@ -1,10 +1,4 @@
-# License Attributions
-
-**1)** This project contains the electron-installer-dmg package which uses the Apache 2.0 license.
-
-The Apache 2.0 license is also provided in the root directory of this project under `LICENSE-APACHE-2.0`.
-
-# Other Attributions
+# Attributions
 
 **1)** The terminal is based off of [77Z](https://github.com/77Z/electron-local-terminal-prototype)'s electron-local-terminal-prototype project.
 
