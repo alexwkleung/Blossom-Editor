@@ -3,9 +3,10 @@
 1. [Blossom Editor](#blossom-editor)
 2. [Warnings](#warnings)
 3. [Installation](#installation)
-4. [Contributions](#contributions)
-5. [To-Do's](#to-dos)
-5. [License & Attributions](#license--attributions)
+4. [Manual Installation](#manual-installation)
+5. [Contributions](#contributions)
+6. [To-Do's](#to-dos)
+7. [License & Attributions](#license--attributions)
 
 # Blossom Editor
 
@@ -47,7 +48,7 @@ Sample screenshots.
 
 # Warnings
 
-**1)** You'll be packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed.
+**1)** You have the option of packaging the application and creating the `.dmg`. If you don't want to go through the packaging process, the `.dmg` is provided in the root directory and ready to be installed.This application is not code signed.
 
 **2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
@@ -66,6 +67,26 @@ System Preferences >> General >> Prefer tabs >> "always" when opening documents
 Without enabling this, your new tabs will become separate windows.
 
 # Installation
+
+Clone the repository
+
+```bash
+git clone <SSH/HTTPS>
+```
+
+Change directory
+
+```bash
+cd Blossom-Editor
+```
+
+Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
+
+![dmg](img/dmg.png)
+
+**Note:** Don't forget to eject the `blossom-editor.dmg`.
+
+# Manual Installation 
 
 Clone the repository
 
