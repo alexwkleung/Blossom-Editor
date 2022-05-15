@@ -12,9 +12,11 @@
 
 ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey)
 
+⚠️ **THIS TEXT-EDITOR IS EXPERIMENTAL.**
+
 Blossom Editor is a 2000s era inspired text-editor with a slight modern touch. 
 
-This text-editor is seen as a substitute for your built-in notepad app, doing quick code edits, or basic markdown writing. In short, think of this as a complement to your daily text-editor or IDE when you want to do miniscule things. 
+This text-editor is seen as a substitute for your built-in notepad app, doing quick code edits, or simple markdown writing. In short, think of this as a complement to your daily text-editor or IDE when you want to do miniscule things. 
 
 **Created with:**
 
@@ -36,7 +38,7 @@ This text-editor is seen as a substitute for your built-in notepad app, doing qu
 
 The themes that come with Blossom Editor are slightly and/or heavily modified versions of CodeMirror's default themes that I found to fit best: duotone-dark, zenburn, 3024-night, paraiso-dark, gruvbox-dark, abcdef, and xq-dark, respectively.
 
-Duotone-dark was the theme I initially chose to be the default for Blossom-Editor, and thus modified it accordingly. I like blinking block cursors and the purple-greyish colours, so Duotone-dark was the perfect match as a base.
+Duotone-dark was the theme I initially chose to be the main default for Blossom-Editor, and modified it accordingly. I like blinking block cursors and the purple-greyish colours, so Duotone-dark was the perfect match as a base.
 
 Sample screenshots.
 
@@ -48,13 +50,15 @@ Sample screenshots.
 
 # Warnings
 
-**1)** You have the option of packaging the application, creating the `.dmg`, and installing it yourself. This application is not code signed.
+**1)** You have the option of packaging the application and creating the `.dmg` yourself. All the install methods do not have a `.dmg` that is code signed.
 
 **2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**3)** You are liable for any file loss or damage. Keep in mind that this is an experimental project, so nothing about this is perfect in any way, shape, or form compared to current day text-editors. Everyone has different use cases as well. While this may work fine for others, it may not work for you.
+**3)** You are liable for any file loss or damage. Nothing about this is perfect in any way, shape, or form compared to current day text-editors. Everyone has different use cases as well. While this may work fine for others, it may not work for you.
 
-**3)** There might be slight performance issues since I haven't done any proper optimizations. Expect variable RAM usage and fans to kick in depending on your system specs.
+**4)** There might be slight performance issues since I haven't done any optimizations. Expect variable RAM usage depending on your system specs.
+
+**5)** Use this at your own risk. 
 
 # Pre-Requisites
 
