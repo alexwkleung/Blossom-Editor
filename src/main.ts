@@ -21,6 +21,7 @@ const createWindow = (): void => {
         fullscreenable: true,
         tabbingIdentifier: 'new tab', 
         show: false,
+        //opacity: 0.9,
         webPreferences: {
             nodeIntegration: true, //this should be disabled but the terminal won't work without it (renderer process)
             contextIsolation: false,
@@ -41,6 +42,7 @@ const createWindow = (): void => {
                 fullscreenable: true,
                 tabbingIdentifier: 'new tab', 
                 show: false,
+                //opacity: 0.9,
             },
             webPreferences: {
               nodeIntegration: true,
