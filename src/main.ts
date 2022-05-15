@@ -22,6 +22,7 @@ const createWindow = (): void => {
         tabbingIdentifier: 'new tab', 
         show: false,
         webPreferences: {
+            nodeIntegration: true, //this should be disabled but the terminal won't work without it (renderer process)
             contextIsolation: false,
             //preload: path.join(__dirname, 'build/preload.js'),
         }
@@ -42,6 +43,7 @@ const createWindow = (): void => {
                 show: false,
             },
             webPreferences: {
+              nodeIntegration: true,
               contextIsolation: false,
                 //preload: path.join(__dirname, 'build/preload.js')
             }
