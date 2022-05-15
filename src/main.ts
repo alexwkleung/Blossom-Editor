@@ -21,8 +21,7 @@ const createWindow = (): void => {
         fullscreenable: true,
         tabbingIdentifier: 'new tab', 
         show: false,
-        webPreferences: { 
-            nodeIntegration: true,
+        webPreferences: {
             contextIsolation: false,
             //preload: path.join(__dirname, 'build/preload.js'),
         }
@@ -42,8 +41,7 @@ const createWindow = (): void => {
                 tabbingIdentifier: 'new tab', 
                 show: false,
             },
-            webPreferences: { 
-              nodeIntegration: true,
+            webPreferences: {
               contextIsolation: false,
                 //preload: path.join(__dirname, 'build/preload.js')
             }
