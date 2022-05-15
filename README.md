@@ -2,14 +2,15 @@
 
 1. [Blossom Editor](#blossom-editor)
 2. [Warnings](#warnings)
-3. [Installation](#installation)
-4. [Contributions](#contributions)
-5. [To-Do's](#to-dos)
-5. [License & Attributions](#license--attributions)
+3. [Installation (Direct)](#installation-direct)
+4. [Installation (Manual)](#installation-manual)
+5. [Contributions](#contributions)
+6. [To-Do's](#to-dos)
+7. [License & Attributions](#license--attributions)
 
-# Blossom Editor
+# 🌸 Blossom Editor
 
-![Blossom Editor](https://img.shields.io/badge/Blossom%20Editor-1.0.0-ff69b4) ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey)
+![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey)
 
 Blossom Editor is a 2000s era inspired text-editor with a slight modern touch. 
 
@@ -65,7 +66,17 @@ System Preferences >> General >> Prefer tabs >> "always" when opening documents
 
 Without enabling this, your new tabs will become separate windows.
 
-# Installation
+# Installation (Direct)
+
+**1)** Go to `Releases` on the right hand side of the repository and download the latest version of the `.dmg`.
+
+**2)** Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
+
+![dmg](img/dmg.png)
+
+**Note:** Don't forget to eject the `blossom-editor.dmg`.
+
+# Installation (Manual)
 
 Clone the repository
 
