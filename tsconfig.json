@@ -19,5 +19,5 @@
     "allowUnreachableCode": false,                       
     "skipLibCheck": true                                
   },
-  "exclude": ["src/scripts/*", "codemirror/*", "src/renderer.js", "Blossom Editor-darwin-x64"]
+  "exclude": ["node_modules", "src/scripts/*", "codemirror/*", "src/renderer.js", "Blossom Editor-darwin-x64"]
 }
