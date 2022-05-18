@@ -31,7 +31,7 @@
     "electron-installer-dmg": "github:alexwkleung/electron-installer-dmg",
     "electron-localshortcut": "^3.2.1",
     "exec-sh": "^0.4.0",
-    "marked": "^4.0.15",
+    "marked": "^4.0.16",
     "node-pty": "^0.10.1",
     "tslib": "^2.4.0",
     "xterm": "^4.18.0"
