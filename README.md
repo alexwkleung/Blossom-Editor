@@ -72,7 +72,7 @@ Without enabling this, your new tabs will become separate windows.
 
 # Installation (Direct)
 
-**1)** Go to `Releases` on the right hand side of the repository and download the latest version of the `.dmg`.
+**1)** Go to `Releases` on the right hand side of the repository and download the latest version of the `.dmg` (x64 or arm64 depending on your machine).
 
 **2)** Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
 
@@ -103,9 +103,15 @@ npm install
 Build package and create the `.dmg`
 
 ```bash
+# x64: 
 make package
 #or
 npm run package
+
+# arm64: 
+make package-arm
+# or
+npm run package-arm
 ```
 
 Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
@@ -113,6 +119,10 @@ Open the `blossom-editor.dmg` located in the root directory and drag the `blosso
 ![dmg](img/dmg.png)
 
 **Note:** Don't forget to eject the `blossom-editor.dmg`.
+
+# ARM
+
+The `arm64` version has not been tested since I don't have access to a Apple Silicon machine to install it. As a fallback, the `x64` version should work under Rosetta 2 translation. 
 
 # Contributions
 

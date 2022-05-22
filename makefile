@@ -13,3 +13,6 @@ rebuild:
 .PHONY: package
 package: 
 	npm run package
+
+.PHONY: package-arm	
+	npm run package-arm

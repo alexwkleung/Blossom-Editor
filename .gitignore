@@ -3,3 +3,5 @@ node_modules
 build
 Blossom Editor-darwin-x64
 blossom-editor.dmg
+Blossom Editor-darwin-arm64
+blossom-editor-arm64.dmg
