@@ -28,7 +28,7 @@
   "dependencies": {
     "@types/codemirror": "^5.60.5",
     "@types/marked": "^4.0.3",
-    "codemirror": "^5.65.3",
+    "codemirror": "^5.65.4",
     "electron-installer-dmg": "github:alexwkleung/electron-installer-dmg",
     "electron-localshortcut": "^3.2.1",
     "exec-sh": "^0.4.0",
