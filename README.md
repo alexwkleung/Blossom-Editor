@@ -14,7 +14,7 @@
 
 ⚠️ **THIS TEXT-EDITOR IS EXPERIMENTAL.**
 
-Blossom Editor is a 2000s era inspired text-editor with a slight modern touch. 
+Blossom Editor is a 2000s era inspired text-editor.
 
 This text-editor is seen as a substitute for your built-in notepad app, doing quick code edits, or simple markdown writing. In short, think of this as a complement to your daily text-editor or IDE when you want to do miniscule things. 
 
