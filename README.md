@@ -38,7 +38,7 @@ This text-editor is seen as a substitute for your built-in notepad app, doing qu
 
 The themes that come with Blossom Editor are slightly and/or heavily modified versions of CodeMirror's default themes that I found to fit best: duotone-dark, zenburn, 3024-night, paraiso-dark, gruvbox-dark, abcdef, and xq-dark, respectively.
 
-Duotone-dark was the theme I initially chose to be the main default for Blossom-Editor, and modified it accordingly. I like blinking block cursors and the purple-greyish colours, so Duotone-dark was the perfect match as a base.
+Duotone-dark was the theme I initially chose to be the main default for Blossom-Editor, and modified it accordingly. I like blinking block cursors and the purple-greyish colours, so duotone-dark was the perfect match as a base.
 
 Sample screenshots.
 
@@ -50,7 +50,7 @@ Sample screenshots.
 
 # Warnings
 
-**1)** You have the option of packaging the application and creating the `.dmg` yourself. All the install methods do not have a `.dmg` that is code signed.
+**1)** Since you have the option of packaging the application and creating the `.dmg` yourself, you are liable for any damage that may occur.
 
 **2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
