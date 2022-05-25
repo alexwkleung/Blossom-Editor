@@ -14,5 +14,6 @@ rebuild:
 package: 
 	npm run package
 
-.PHONY: package-arm	
+.PHONY: package-arm
+package-arm:
 	npm run package-arm
