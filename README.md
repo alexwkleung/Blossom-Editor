@@ -60,7 +60,7 @@ Sample screenshots.
 
 **5)** Use this at your own risk. 
 
-# Pre-Requisites
+# Prerequisites
 
 To be able to use tabs in Blossom Editor, you must set prefer tabs to always. This is located in your System Preferences:
 
