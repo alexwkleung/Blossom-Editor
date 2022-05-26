@@ -50,7 +50,7 @@ Sample screenshots.
 
 # Warnings
 
-**1)** Since you have the option of packaging the application and creating the `.dmg` yourself, you are liable for any damage that may occur.
+**1)** Since you have the option of packaging the application and creating the `.dmg` yourself, make sure you understand what you're doing.
 
 **2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
@@ -74,11 +74,11 @@ Without enabling this, your new tabs will become separate windows.
 
 **1)** Go to `Releases` on the right hand side of the repository and download the latest version of the `.dmg` (x64 or arm64 depending on your machine).
 
-**2)** Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
+**2)** Open the `.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
 
 ![dmg](img/dmg.png)
 
-**Note:** Don't forget to eject the `blossom-editor.dmg`.
+**Note:** Don't forget to eject the `.dmg`.
 
 # Installation (Manual)
 
@@ -114,11 +114,11 @@ make package-arm
 npm run package-arm
 ```
 
-Open the `blossom-editor.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
+Open the `.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
 
 ![dmg](img/dmg.png)
 
-**Note:** Don't forget to eject the `blossom-editor.dmg`.
+**Note:** Don't forget to eject the `.dmg`.
 
 # ARM
 
