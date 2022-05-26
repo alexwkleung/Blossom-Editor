@@ -9,7 +9,7 @@
     "build": "npx --build --clean",
     "electron": "npx electron .",
     "rebuild": "electron-rebuild",
-    "package": "npx electron-packager . --platform=darwin --arch=x64 --icon=twemoji-14.0-blossom.icns --overwrite && electron-installer-dmg ./\"Blossom Editor-darwin-x64/Blossom Editor.app\" blossom-editor",
+    "package": "npx electron-packager . --platform=darwin --arch=x64 --icon=twemoji-14.0-blossom.icns --overwrite && electron-installer-dmg ./\"Blossom Editor-darwin-x64/Blossom Editor.app\" blossom-editor-x64",
     "package-arm": "npx electron-packager . --platform=darwin --arch=arm64 --icon=twemoji-14.0-blossom.icns --overwrite && electron-installer-dmg ./\"Blossom Editor-darwin-arm64/Blossom Editor.app\" blossom-editor-arm64"
   },
   "bugs": "https://github.com/alexwkleung/Blossom-Editor/issues",
