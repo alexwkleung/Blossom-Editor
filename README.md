@@ -4,19 +4,16 @@
 2. [Warnings](#warnings)
 3. [Installation (Direct)](#installation-direct)
 4. [Installation (Manual)](#installation-manual)
-5. [Contributions](#contributions)
-6. [To-Do's](#to-dos)
-7. [License & Attributions](#license--attributions)
+5. [ARM](#arm)
+6. [License & Attributions](#license--attributions)
 
 # 🌸 Blossom Editor
 
 ![Platforms](https://img.shields.io/badge/Platforms-MacOS-lightgrey) ![Architecture](https://img.shields.io/badge/Architecture-x64-lightgrey)
 
-⚠️ **THIS TEXT-EDITOR IS EXPERIMENTAL.**
+⚠️ **THIS TEXT-EDITOR IS EXPERIMENTAL AND A PROOF OF CONCEPT.**
 
 Blossom Editor is a 2000s era inspired text-editor.
-
-This text-editor is seen as a substitute for your built-in notepad app, doing quick code edits, or simple markdown writing. In short, think of this as a complement to your daily text-editor or IDE when you want to do miniscule things. 
 
 **Created with:**
 
@@ -38,8 +35,6 @@ This text-editor is seen as a substitute for your built-in notepad app, doing qu
 
 The themes that come with Blossom Editor are slightly and/or heavily modified versions of CodeMirror's default themes that I found to fit best: duotone-dark, zenburn, 3024-night, paraiso-dark, gruvbox-dark, abcdef, and xq-dark, respectively.
 
-Duotone-dark was the theme I initially chose to be the main default for Blossom-Editor, and modified it accordingly. I like blinking block cursors and the purple-greyish colours, so duotone-dark was the perfect match as a base.
-
 Sample screenshots.
 
 ![one](img/one.png)
@@ -52,13 +47,17 @@ Sample screenshots.
 
 **1)** Since you have the option of packaging the application and creating the `.dmg` yourself, make sure you understand what you're doing.
 
-**2)** Due to the lack of a proper load, save, file explorer, and other features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
+**2)** Due to the lack of a proper load, save, and important features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
 
-**3)** You are liable for any file loss or damage. Nothing about this is perfect in any way, shape, or form compared to current day text-editors. Everyone has different use cases as well. While this may work fine for others, it may not work for you.
+**3)** You are liable for any file loss or damage. Nothing about this is perfect in any way, shape, or form compared to current day text-editors.
 
 **4)** There might be slight performance issues since I haven't done any optimizations. Expect variable RAM usage depending on your system specs.
 
-**5)** Use this at your own risk. 
+**5)** Many of the implementations are very barebones (i.e., no HTML sanitization) and hack-y. While it does look pretty cool, the source code is quite messy.
+
+**6)** If you are going to build on top of this for whatever reason, I recommend that you should properly import the dependencies and use a bundler like Rollup.
+
+**7)** Lastly, use this at your own risk. 
 
 # Prerequisites
 
@@ -122,15 +121,7 @@ Open the `.dmg` located in the root directory and drag the `blossom-editor.app` 
 
 # ARM
 
-The `arm64` version has not been tested since I don't have access to a Apple Silicon machine to install it. As a fallback, the `x64` version should work under Rosetta 2 translation. 
-
-# Contributions
-
-Contributions are welcomed.
-
-# To-Do's
-
-- Implement a proper load and save function to make it more stable for daily usage. At the moment, this is the biggest flaw with the app. 
+The `arm64` version has not been tested. As a fallback, the `x64` version should work under Rosetta 2 translation. 
 
 # License & Attributions
 
