@@ -19,7 +19,7 @@ Blossom Editor is a 2000s era inspired text-editor.
 
 - Languages: TypeScript, JavaScript
 
-- Framework: Electron
+- Desktop Framework: Electron
 
 - Editor: CodeMirror 
 
@@ -27,13 +27,11 @@ Blossom Editor is a 2000s era inspired text-editor.
 
 - Markdown Parser: Marked
 
-- Tools: exec-sh
+- Shell Tools: exec-sh
 
 - Button Icons: Material Symbols 
 
 - Icon: Twemoji 14.0 - Cherry Blossom
-
-The themes that come with Blossom Editor are slightly and/or heavily modified versions of CodeMirror's default themes that I found to fit best: duotone-dark, zenburn, 3024-night, paraiso-dark, gruvbox-dark, abcdef, and xq-dark, respectively.
 
 Sample screenshots.
 
@@ -45,19 +43,7 @@ Sample screenshots.
 
 # Warnings
 
-**1)** Since you have the option of packaging the application and creating the `.dmg` yourself, make sure you understand what you're doing.
-
-**2)** Due to the lack of a proper load, save, and important features, this SHOULD NOT be used in a professional or in a serious workflow of any sort. 
-
-**3)** You are liable for any file loss or damage. Nothing about this is perfect in any way, shape, or form compared to current day text-editors.
-
-**4)** There might be slight performance issues since I haven't done any optimizations. Expect variable RAM usage depending on your system specs.
-
-**5)** Many of the implementations are very barebones (i.e., no HTML sanitization) and hack-y. While it does look pretty cool, the source code is quite messy.
-
-**6)** If you are going to build on top of this for whatever reason, I recommend that you should properly import the dependencies and use a bundler like Rollup.
-
-**7)** Lastly, use this at your own risk. 
+This text-editor should not be used in production or for daily use.
 
 # Prerequisites
 
