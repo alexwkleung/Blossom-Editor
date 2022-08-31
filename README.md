@@ -85,7 +85,15 @@ Install npm dependencies
 npm install
 ```
 
-Build package and create the `.dmg`
+Compile native modules
+
+```bash
+make rebuild 
+#or 
+npm run rebuild
+```
+
+Package app and create the `.dmg`
 
 ```bash
 # x64: 
@@ -98,6 +106,8 @@ make package-arm
 # or
 npm run package-arm
 ```
+
+If there are any issues with packaging due to `NODE_MODULE_VERSION` mismatch, you should run `npm rebuild <package>`
 
 Open the `.dmg` located in the root directory and drag the `blossom-editor.app` into the Applications folder as shown:
 

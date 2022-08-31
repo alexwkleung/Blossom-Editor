@@ -1,10 +1,10 @@
 .PHONY: build
 build: 
-	npx tsc --build --clean && npx tsc 
+	npm run build
 
 .PHONY: electron
 electron:
-	npx electron .
+	npm run electron
 
 .PHONY: rebuild
 rebuild:
